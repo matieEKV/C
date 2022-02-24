@@ -14,12 +14,12 @@ int main(void)
 // loop line by line
     for (int line=0; line<height; line++) {
 // print dots
-        for (int dots=(height-line); dots<line; dots++){
+        for (int dots=1; dots<(height-line); dots++){
             printf(".");
         }
 // print hashtags
         for (int index=0; index<=line; index++){
-            // printf("#");
+            printf("#");
         }
         printf("\n");
     }
