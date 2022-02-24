@@ -3,7 +3,6 @@
 
 int main(void)
 {
-    // ask user for input
     int height = 0;
 
     //check if condition is correct
@@ -11,4 +10,6 @@ int main(void)
          height = get_int("What is your desired height?");
     }
     while (height <1 || height >8);
+
+    for ()
 }
