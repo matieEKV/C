@@ -8,7 +8,7 @@ int main(void)
 
     //check if condition is correct
     do {
-
+        printf ("good so far/n");
     }
-    while (height >=1 && height <=8);
+    while (height <1 || height >8);
 }
