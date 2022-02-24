@@ -11,5 +11,5 @@ int main(void)
     }
     while (height <1 || height >8);
 
-    for (height=0, height )
+    for (int line=0, line<height, line++)
 }
