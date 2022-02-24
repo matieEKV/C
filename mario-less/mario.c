@@ -15,7 +15,7 @@ int main(void)
     for (int line=0; line<height; line++) {
 // print dots
         for (int dots=1; dots<(height-line); dots++){
-            printf(".");
+            printf(" ");
         }
 // print hashtags
         for (int index=0; index<=line; index++){
