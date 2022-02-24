@@ -7,6 +7,6 @@ int main(void)
     int height = get_int("What is your desired height?");
 
     //check if condition is correct
-    
+    do
 
 }
