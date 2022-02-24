@@ -4,11 +4,11 @@
 int main(void)
 {
     // ask user for input
-    int height = get_int("What is your desired height?");
+    int height = 0;
 
     //check if condition is correct
     do {
-        printf ("good so far/n");
+         height = get_int("What is your desired height?");
     }
     while (height <1 || height >8);
 }
