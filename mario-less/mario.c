@@ -17,6 +17,6 @@ int main(void)
         for (int index=0; index<line; index++){
             printf("#");
         }
-        
+        printf("\n");
     }
 }
