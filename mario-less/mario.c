@@ -11,8 +11,9 @@ int main(void)
     }
     while (height <1 || height >8);
 
+// loop line by line
     for (int line=0; line<height; line++) {
         // printf("#\n");
-        
+        for (int )
     }
 }
