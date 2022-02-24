@@ -14,7 +14,7 @@ int main(void)
 // loop line by line
     for (int line=0; line<height; line++) {
         // printf("#\n");
-        for (int index=0; index<line; index++){
+        for (int index=0; index<=line; index++){
             printf("#");
         }
         printf("\n");
