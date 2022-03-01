@@ -25,10 +25,13 @@ int main(void)
         {
             printf("#");
         }
-        for (int space = 0; space <= line; space=)
+// print a space
+        //for (int space = 0; space <= line; space=)
+        while 
         {
             printf(" ");
         }
+//print other side hashtags
         for (int index = 0; index <= line; index++)
         {
             printf("#");
