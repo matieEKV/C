@@ -28,7 +28,7 @@ int main(void)
         }
 // print a space
         //for (int space = 0; space <= line; space=)
-        while
+        while 
         {
             printf(" ");
         }
