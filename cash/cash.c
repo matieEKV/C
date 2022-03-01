@@ -48,11 +48,9 @@ int get_cents(void)
 
 int calculate_quarters(int cents)
 {
-    do {
-        
-    }
+    int cents = cents / 2;
     // TODO
-    return 0;
+    return;
 }
 
 int calculate_dimes(int cents)
