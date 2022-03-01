@@ -25,7 +25,7 @@ int main(void)
         {
             printf("#");
         }
-        for (int index = 0; index <= line; index++)
+        for (int space = 0; space <= line; space=1)
         {
             printf(" ");
         }
