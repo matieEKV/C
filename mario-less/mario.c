@@ -4,6 +4,7 @@
 int main(void)
 {
     int height = 0;
+    char space = " ";
 
     //check if condition is correct
     do
@@ -27,7 +28,7 @@ int main(void)
         }
 // print a space
         //for (int space = 0; space <= line; space=)
-        while 
+        while
         {
             printf(" ");
         }
