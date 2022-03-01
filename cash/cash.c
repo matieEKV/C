@@ -12,14 +12,10 @@ int main(void)
     // Ask how many cents the customer is owed
     do
     {
-        int cents = get_cents();
+        int cents = get_cents("Change owed: /n");
     }
-    int cents = get_cents();
-
     while (cents>=0);
-    {
-        printf ()
-    }
+
 
     // Calculate the number of quarters to give the customer
     int quarters = calculate_quarters(cents);
