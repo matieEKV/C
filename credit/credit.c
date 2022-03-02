@@ -1,21 +1,21 @@
 #include <cs50.h>
 #include <stdio.h>
 
-long get_long(void);
-int checksum (long cc_number);
+int get_long(void);
+int checksum (int cc_number);
 
 int main(void)
 {
 
 }
 
-long get_long(void);
+int get_long(void);
 {
     int cc_number = get_long ("What is your credit card number?\n");
     return cc_number;
 }
 
-int checksum (long cc_number);
+int checksum (int cc_number);
 {
 
 }
