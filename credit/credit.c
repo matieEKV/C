@@ -11,7 +11,8 @@ int main(void)
 
 int get_int(void);
 {
-    int cc_number = get_int ("What is your credit card number?\n");
+    int cc_number = 0,
+    cc_number = get_int ("What is your credit card number?\n");
     return cc_number;
 }
 
