@@ -24,7 +24,8 @@ int checksum (int cc_number)
     int alternate_number_sum = 0;
     while (cc_number > 0)
     {
-        cc_number /= 10
+        cc_number /= 10;
+        alternate_number_sum += cc_number % 10;
     }
-    return cc_number;
+    return alternate_number_sum;
 }
