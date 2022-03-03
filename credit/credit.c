@@ -21,6 +21,10 @@ int get_number(void)
 
 int checksum (int cc_number)
 {
-    cc_nummber = cc_number/10
+    int alternate_number_sum = 0;
+    while (cc_number > 0)
+    {
+        cc_number /= 10
+    }
     return cc_number;
 }
