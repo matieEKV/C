@@ -3,7 +3,7 @@
 
 int get_number (void);
 int checksum (int cc_number);
-int 
+int number_digit_sum (int number);
 
 int main(void)
 {
@@ -32,4 +32,9 @@ int checksum (int cc_number)
         cc_number /= 10;
     }
     return alternate_number_sum;
+}
+
+int number_digit_sum (int number)
+{
+
 }
