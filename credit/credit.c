@@ -10,10 +10,15 @@ int main(void)
     //ask user for input
     int cc_number = get_number();
 
-    int alternate_number_sum = checksum (cc_number);
+    int sum = checksum(cc_number);
+    if (sum%10==0)
+    {
+        printf ("VALID\n");
+    }
 
 
-    printf ("%i\n", alternate_number_sum);
+
+    printf ("%i\n", sum);
 }
 
 int get_number(void)
@@ -22,7 +27,7 @@ int get_number(void)
     return cc_number;
 }
 
-int checksum (int cc_number)
+int checksum(int cc_number)
 {
     int alternate_number_sum = 0;
     int double_digit_sum =0;
@@ -38,7 +43,7 @@ int checksum (int cc_number)
     return alternate_number_sum + double_digit_sum;
 }
 
-int number_digit_sum (int number)
+int number_digit_sum(int number)
 {
     return number/10 + number%10;
 }
