@@ -8,7 +8,7 @@ int main(void)
 {
     //ask user for input
     int cc_number = get_number();
-    
+
     int alternate_number_sum = checksum (cc_number);
 
 
@@ -27,7 +27,7 @@ int checksum (int cc_number)
     while (cc_number > 0)
     {
         cc_number /= 10;
-        alternate_number_sum += cc_number % 10;
+        alternate_number_sum += (cc_number % 10)* 2;
         cc_number /= 10;
     }
     return alternate_number_sum;
