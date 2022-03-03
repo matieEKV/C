@@ -26,6 +26,7 @@ int checksum (int cc_number)
     {
         cc_number /= 10;
         alternate_number_sum += cc_number % 10;
+        printf ("%i\n", alternate_number_sum);
     }
     return alternate_number_sum;
 }
