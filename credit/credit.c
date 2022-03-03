@@ -25,12 +25,14 @@ int get_number(void)
 int checksum (int cc_number)
 {
     int alternate_number_sum = 0;
+    int double_digit_sum =0;
+    
     while (cc_number > 0)
     {
         cc_number /= 10;
 
         alternate_number_sum += cc_number % 10;
-        += number_digit_sum ((cc_number % 10)* 2);
+        double_digit_sum += number_digit_sum ((cc_number % 10)* 2);
         cc_number /= 10;
     }
     return alternate_number_sum;
