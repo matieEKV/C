@@ -36,5 +36,5 @@ int checksum (int cc_number)
 
 int number_digit_sum (int number)
 {
-    return number
+    return number/10 + number%10;
 }
