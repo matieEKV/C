@@ -7,6 +7,9 @@ int checksum (int cc_number);
 int main(void)
 {
     int cc_number = get_number();
+
+    int test = checksum();
+    printf 
 }
 
 int get_number(void)
