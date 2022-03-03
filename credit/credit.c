@@ -3,6 +3,7 @@
 
 int get_number (void);
 int checksum (int cc_number);
+int 
 
 int main(void)
 {
