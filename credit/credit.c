@@ -9,7 +9,8 @@ int main(void)
     int cc_number = get_number();
 
     int test = checksum();
-    printf 
+    test = cc_number % 10;
+    printf ("%i\n", test);
 }
 
 int get_number(void)
