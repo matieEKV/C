@@ -7,7 +7,7 @@ int checksum (int cc_number);
 int main(void)
 {
     int cc_number = get_number();
-    int alternate_number_sum = checksum (int cc_number);
+    int alternate_number_sum = checksum (cc_number);
 
 
     printf ("%i\n", alternate_number_sum);
