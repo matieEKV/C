@@ -17,5 +17,6 @@ int get_number(void)
 
 int checksum (int cc_number)
 {
-    return 0;
+    cc_nummber = cc_number/10
+    return cc_number;
 }
