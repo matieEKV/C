@@ -1,14 +1,14 @@
 #include <cs50.h>
 #include <stdio.h>
 
-int get_number (void);
-int checksum (int cc_number);
+long get_number (void);
+int checksum (long cc_number);
 int number_digit_sum (int number);
 
 int main(void)
 {
     //ask user for input
-    int cc_number = get_number();
+    long cc_number = get_number();
 
     int sum = checksum(cc_number);
     if (sum%10==0)
@@ -21,15 +21,14 @@ int main(void)
     printf ("%i\n", sum);
 }
 
-int get_number(void)
+long get_number(void)
 {
-    int cc_number = get_long ("What is your credit card number?\n");
-    return cc_number;
+    return get_long ("What is your credit card number?\n");
 }
 
-int checksum(int cc_number)
+int checksum(long cc_number)
 {
-    printf ("checking input: %i\n", cc_number);
+    // printf ("checking input: %i\n", cc_number);
     int alternate_number_sum = 0;
     int double_digit_sum = 0;
 
