@@ -6,7 +6,9 @@ int checksum (int cc_number);
 
 int main(void)
 {
+    //ask user for input
     int cc_number = get_number();
+    
     int alternate_number_sum = checksum (cc_number);
 
 
@@ -27,7 +29,6 @@ int checksum (int cc_number)
         cc_number /= 10;
         alternate_number_sum += cc_number % 10;
         cc_number /= 10;
-        printf ("%i\n", alternate_number_sum);
     }
     return alternate_number_sum;
 }
