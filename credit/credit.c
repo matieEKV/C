@@ -28,7 +28,7 @@ int checksum (int cc_number)
     while (cc_number > 0)
     {
         cc_number /= 10;
-        alternate_number_sum += (cc_number % 10)* 2;
+        alternate_number_sum += number_digit_sum ((cc_number % 10)* 2);
         cc_number /= 10;
     }
     return alternate_number_sum;
@@ -36,5 +36,5 @@ int checksum (int cc_number)
 
 int number_digit_sum (int number)
 {
-
+    
 }
