@@ -1,7 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 
-int get_int(void);
+int get_cents (void);
 int checksum (int cc_number);
 
 int main(void)
@@ -9,10 +9,9 @@ int main(void)
 
 }
 
-int get_int(void);
+int get_cents(void)
 {
-    int cc_number = 0,
-    cc_number = get_int ("What is your credit card number?\n");
+    int cc_number = get_cents ("What is your credit card number?\n");
     return cc_number;
 }
 
