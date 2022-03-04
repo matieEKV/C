@@ -53,13 +53,13 @@ int number_digit_sum(int number)
 
 int get_length (long cc_number)
 {
-    int num = 0;
+    int counter = 0;
     while (cc_number > 0)
     {
-        num = cc_number/10;
-        num++;
+        counter = cc_number/10;
+        counter++;
     }
     printf ("%i\n", num);
-    return num;
+    return counter;
 }
 
