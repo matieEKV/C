@@ -4,7 +4,7 @@
 long get_number (void);
 int checksum (long cc_number);
 int number_digit_sum (int number);
-int get_length (int input);
+int get_length (long cc_number);
 
 int main(void)
 {
@@ -50,7 +50,8 @@ int number_digit_sum(int number)
 {
     return number/10 + number%10;
 }
-int get_length (int input)
+
+int get_length (long cc_number)
 {
     int num = 0;
     while (num < 17)
