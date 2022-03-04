@@ -44,8 +44,8 @@ int checksum(long cc_number)
     while (cc_number > 0)
     {
         cc_number %= 10;
-        other_number_sum += cc_number/10;
-        cc_number %= 10;
+        other_number_sum += cc_number/100;
+        //cc_number %= 10;
         printf ("other number sum: %i\n", other_number_sum);
     }
     //printf ("alternate nums: %i\n", alternate_number_sum);
