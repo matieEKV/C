@@ -40,6 +40,10 @@ int checksum(long cc_number)
         double_digit_sum += number_digit_sum ((cc_number % 10)* 2);
         cc_number /= 10;
     }
+    while (cc_number > 0)
+    {
+        
+    }
     //printf ("alternate nums: %i\n", alternate_number_sum);
     printf ("double digits: %i\n", double_digit_sum);
     return alternate_number_sum + double_digit_sum;
