@@ -38,7 +38,7 @@ int main(void)
     {
         printf ("AMEX\n");
     }
-    else if ((second_digit == 34 || second_digit == 37) && length == 15)
+    else if ((second_digit >=51 && second > 34 || second_digit == 37) && length == 15)
     {
         printf ("AMEX\n");
     }
