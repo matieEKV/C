@@ -54,7 +54,7 @@ int number_digit_sum(int number)
 int get_length (long cc_number)
 {
     int num = 0;
-    while (cc_number == 0)
+    while (cc_number > 0)
     {
         num = cc_number/10;
         num++;
