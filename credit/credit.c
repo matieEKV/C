@@ -21,6 +21,7 @@ int main(void)
     {
         printf ("INVALID\n");
     }
+    int length = get_length(cc_number);
 }
 
 long get_number(void)
