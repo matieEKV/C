@@ -4,6 +4,7 @@
 long get_number (void);
 int checksum (long cc_number);
 int number_digit_sum (int number);
+int input_length (int num);
 
 int main(void)
 {
