@@ -11,7 +11,7 @@ int main(void)
     long cc_number = get_number();
 
     int sum = checksum(cc_number);
-    if (sum%10==0)
+    //if (sum%10==0)
     {
         printf ("VALID\n");
     }
@@ -35,11 +35,11 @@ int checksum(long cc_number)
 
     //while (cc_number > 0)
     {
-        cc_number /= 10;
+       // cc_number /= 10;
 
         //alternate_number_sum += cc_number % 10;
-        double_digit_sum += number_digit_sum ((cc_number % 10)* 2);
-        cc_number /= 10;
+       // double_digit_sum += number_digit_sum ((cc_number % 10)* 2);
+        //cc_number /= 10;
     }
     while (cc_number > 0)
     {
