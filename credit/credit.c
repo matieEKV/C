@@ -33,7 +33,7 @@ int checksum(long cc_number)
     int double_digit_sum = 0;
     int other_number_sum = 0;
 
-    while (cc_number > 0)
+    //while (cc_number > 0)
     {
         cc_number /= 10;
 
