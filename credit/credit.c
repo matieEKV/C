@@ -24,7 +24,7 @@ int main(void)
     int first_digit = cc_number / pow(10, power_1);
     //printf ("%i\n", first_digit);
     int power_2 = length - 2;
-    int second_digit = cc_number / pow(10, power_2);
+    int two_digits = cc_number / pow(10, power_2);
     //printf ("%i\n", second_digit);
 
     if (first_digit == 4 && (length == 13 || length == 16))
@@ -32,12 +32,12 @@ int main(void)
         printf ("VISA\n");
         return 0;
     }
-    if ((second_digit == 34 || second_digit == 37) && length == 15)
+    if ((two_digits == 34 || two_digits == 37) && length == 15)
     {
         printf ("AMEX\n");
         return 0;
     }
-    if ((second_digit >= 51 && second_digit <= 55) && length == 16)
+    if ((two_digits >= 51 && two_digits <= 55) && length == 16)
     {
         printf ("AMEX\n");
         return 0;
