@@ -13,15 +13,12 @@ int main(void)
     long cc_number = get_number();
 
     int sum = checksum(cc_number);
-    printf ("%i\n", sum);
-    if (sum%10==0)
-    {
-        printf ("VALID\n");
-    }
-    else
+    //printf ("%i\n", sum);
+    if (sum%10!=0)
     {
         printf ("INVALID\n");
     }
+
     int length = get_length(cc_number);
     int power_1 = length - 1;
     int first_digit = cc_number / pow(10, power_1);
