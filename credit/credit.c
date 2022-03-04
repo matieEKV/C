@@ -31,6 +31,7 @@ int checksum(long cc_number)
     // printf ("checking input: %i\n", cc_number);
     int alternate_number_sum = 0;
     int double_digit_sum = 0;
+    int other_number_sum = 0;
 
     while (cc_number > 0)
     {
@@ -42,7 +43,7 @@ int checksum(long cc_number)
     }
     while (cc_number > 0)
     {
-        
+        cc_number %= 10
     }
     //printf ("alternate nums: %i\n", alternate_number_sum);
     printf ("double digits: %i\n", double_digit_sum);
