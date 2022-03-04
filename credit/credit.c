@@ -2,10 +2,10 @@
 #include <stdio.h>
 #include <math.h>
 
-long get_number (void);
-int checksum (long cc_number);
-int number_digit_sum (int number);
-int get_length (long cc_number);
+long get_number(void);
+int checksum(long cc_number);
+int number_digit_sum(int number);
+int get_length(long cc_number);
 
 int main(void)
 {
@@ -14,9 +14,9 @@ int main(void)
 
     int sum = checksum(cc_number);
     //printf ("%i\n", sum);
-    if (sum%10!=0)
+    if (sum % 10 != 0)
     {
-        printf ("INVALID\n");
+        printf("INVALID\n");
         return 0;
     }
 
@@ -30,17 +30,17 @@ int main(void)
 
     if (first_digit == 4 && (length == 13 || length == 16))
     {
-        printf ("VISA\n");
+        printf("VISA\n");
         return 0;
     }
     if ((two_digits == 34 || two_digits == 37) && length == 15)
     {
-        printf ("AMEX\n");
+        printf("AMEX\n");
         return 0;
     }
     if ((two_digits >= 51 && two_digits <= 55) && length == 16)
     {
-        printf ("MASTERCARD\n");
+        printf("MASTERCARD\n");
         return 0;
     }
     else
@@ -51,7 +51,7 @@ int main(void)
 
 long get_number(void)
 {
-    return get_long ("What is your credit card number?\n");
+    return get_long("What is your credit card number?\n");
 }
 
 int checksum(long cc_number)
@@ -65,7 +65,7 @@ int checksum(long cc_number)
         alternate_number_sum += cc_number % 10;
         cc_number /= 10;
 
-        double_digit_sum += number_digit_sum ((cc_number % 10)* 2);
+        double_digit_sum += number_digit_sum((cc_number % 10) * 2);
         cc_number /= 10;
     }
 
@@ -74,15 +74,15 @@ int checksum(long cc_number)
 
 int number_digit_sum(int number)
 {
-    return number/10 + number%10;
+    return number / 10 + number % 10;
 }
 
-int get_length (long cc_number)
+int get_length(long cc_number)
 {
     int counter = 0;
     while (cc_number > 0)
     {
-        cc_number=cc_number/10;
+        cc_number = cc_number / 10;
         counter++;
     }
     //printf ("%i\n", counter);
