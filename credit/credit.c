@@ -43,8 +43,6 @@ int checksum1(long cc_number)
         cc_number /= 10;
     }
 
-    //printf ("alternate nums: %i\n", alternate_number_sum);
-    //printf ("double digits: %i\n", double_digit_sum);
     return alternate_number_sum + double_digit_sum;
 }
 
