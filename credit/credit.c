@@ -33,14 +33,17 @@ int main(void)
     if (first_digit == 4 && (length == 13 || length == 16))
     {
         printf ("VISA\n");
+        return 0;
     }
-    else if ((second_digit == 34 || second_digit == 37) && length == 15)
+    if ((second_digit == 34 || second_digit == 37) && length == 15)
     {
         printf ("AMEX\n");
+        return 0;
     }
-    else if ((second_digit >=51 && second > 34 || second_digit == 37) && length == 15)
+    if ((second_digit >=51 && second > 34 || second_digit == 37) && length == 15)
     {
         printf ("AMEX\n");
+        return 0;
     }
 
 
