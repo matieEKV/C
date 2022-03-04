@@ -43,7 +43,7 @@ int checksum(long cc_number)
     }
     while (cc_number > 0)
     {
-        other_number_sum = cc_number%10;
+        other_number_sum += cc_number%10;
         cc_number/=10;
         cc_number/=10;
         printf ("other number sum: %i\n", other_number_sum);
