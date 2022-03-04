@@ -59,7 +59,7 @@ int get_length (long cc_number)
         cc_number/=10;
         counter++;
     }
-    printf ("%i\n", counter);
+    printf ("%d\n", counter);
     return counter;
 }
 
