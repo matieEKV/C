@@ -48,4 +48,5 @@ int checksum(long cc_number)
 int number_digit_sum(int number)
 {
     return number/10 + number%10;
+    printf ("number: %i\n", number);
 }
