@@ -22,6 +22,7 @@ int main(void)
         printf ("INVALID\n");
     }
     int length = get_length(cc_number);
+    int first_digit = 
 
     if (length)
 }
