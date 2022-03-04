@@ -39,7 +39,7 @@ int main(void)
     }
     if ((two_digits >= 51 && two_digits <= 55) && length == 16)
     {
-        printf ("AMEX\n");
+        printf ("MASTERCARD\n");
         return 0;
     }
 
