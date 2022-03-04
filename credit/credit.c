@@ -25,7 +25,7 @@ int main(void)
     int length = get_length(cc_number);
     double power_1 = length - 1;
     double first_digit = pow(cc_number, power_1);
-    printf("%d\n", first_digit);
+    printf("%f\n", first_digit);
 
 
     //if (length)
