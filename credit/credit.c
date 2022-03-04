@@ -2,8 +2,7 @@
 #include <stdio.h>
 
 long get_number (void);
-int checksum1 (long cc_number);
-int checksum2 (long cc_number);
+int checksum (long cc_number);
 int number_digit_sum (int number);
 
 int main(void)
@@ -11,7 +10,7 @@ int main(void)
     //ask user for input
     long cc_number = get_number();
 
-    int sum = checksum1(cc_number);// + checksum2(cc_number);
+    int sum = checksum(cc_number);
     printf ("%i\n", sum);
     if (sum%10==0)
     {
@@ -28,7 +27,7 @@ long get_number(void)
     return get_long ("What is your credit card number?\n");
 }
 
-int checksum1(long cc_number)
+int checksum(long cc_number)
 {
     // printf ("checking input: %i\n", cc_number);
     int alternate_number_sum = 0;
@@ -44,18 +43,6 @@ int checksum1(long cc_number)
     }
 
     return alternate_number_sum + double_digit_sum;
-}
-
-int checksum2 (long cc_number)
-{
-    int other_number_sum = 0;
-while (cc_number > 0)
-    {
-        other_number_sum += cc_number%10;
-        cc_number/=100;
-        //printf ("other number sum: %i\n", other_number_sum);
-    }
-    return other_number_sum;
 }
 
 int number_digit_sum(int number)
