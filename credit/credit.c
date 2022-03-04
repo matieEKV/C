@@ -17,6 +17,10 @@ int main(void)
     {
         printf ("VALID\n");
     }
+    else
+    {
+        printf ("INVALID\n");
+    }
 }
 
 long get_number(void)
