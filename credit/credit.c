@@ -22,9 +22,12 @@ int main(void)
         printf ("INVALID\n");
     }
     int length = get_length(cc_number);
-    int first_digit = 
+    int power_1 = length - 1;
+    int first_digit = (cc_number/10**power_1);
+    printf("%i\n", first_digit);
 
-    if (length)
+
+    //if (length)
 }
 
 long get_number(void)
