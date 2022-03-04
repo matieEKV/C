@@ -43,9 +43,10 @@ int main(void)
         printf ("MASTERCARD\n");
         return 0;
     }
-
-
-    //if (length)
+    else
+    {
+        printf("INVALID\n");
+    }
 }
 
 long get_number(void)
