@@ -30,7 +30,7 @@ int main(void)
     int second_digit = cc_number / pow(10, power_2);
     //printf ("%i\n", second_digit);
 
-    if (first_digit == 4 && length)
+    if (first_digit == 4 && (length == 13 || length == 16))
 
 
     //if (length)
