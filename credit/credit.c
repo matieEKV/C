@@ -56,6 +56,7 @@ while (cc_number > 0)
         cc_number/=10;
         cc_number/=10;
         printf ("other number sum: %i\n", other_number_sum);
+        return 0;
     }
 }
 
