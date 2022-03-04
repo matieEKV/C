@@ -56,10 +56,10 @@ int get_length (long cc_number)
     int counter = 0;
     while (cc_number > 0)
     {
-        counter = cc_number/10;
+        cc_number/=10;
         counter++;
     }
-    printf ("%i\n", num);
+    printf ("%i\n", counter);
     return counter;
 }
 
