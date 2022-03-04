@@ -17,6 +17,7 @@ int main(void)
     if (sum%10!=0)
     {
         printf ("INVALID\n");
+        return 0;
     }
 
     int length = get_length(cc_number);
