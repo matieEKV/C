@@ -11,15 +11,12 @@ int main(void)
     //ask user for input
     long cc_number = get_number();
 
-    int sum = checksum1(cc_number);
-    //if (sum%10==0)
+    int sum = checksum1(cc_number) + checksum2(cc_number);
+    printf ("%i\n", sum);
+    if (sum%10==0)
     {
         printf ("VALID\n");
     }
-
-
-
-    printf ("%i\n", sum);
 }
 
 long get_number(void)
@@ -55,7 +52,7 @@ while (cc_number > 0)
         other_number_sum += cc_number%10;
         cc_number/=10;
         cc_number/=10;
-        printf ("other number sum: %i\n", other_number_sum);
+        //printf ("other number sum: %i\n", other_number_sum);
     }
     return other_number_sum;
 }
