@@ -11,7 +11,7 @@ int main(void)
     //ask user for input
     long cc_number = get_number();
 
-    int sum = checksum1(cc_number) + checksum2(cc_number);
+    int sum = checksum1(cc_number);// + checksum2(cc_number);
     printf ("%i\n", sum);
     if (sum%10==0)
     {
@@ -36,9 +36,9 @@ int checksum1(long cc_number)
 
     while (cc_number > 0)
     {
+        alternate_number_sum += cc_number % 10;
         cc_number /= 10;
 
-        //alternate_number_sum += cc_number % 10;
         double_digit_sum += number_digit_sum ((cc_number % 10)* 2);
         cc_number /= 10;
     }
