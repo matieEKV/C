@@ -40,7 +40,7 @@ int main(void)
         printf ("AMEX\n");
         return 0;
     }
-    if ((second_digit >=51 && second > 34 || second_digit == 37) && length == 15)
+    if ((second_digit >= 51 && second_digit <= 55) && length == 16)
     {
         printf ("AMEX\n");
         return 0;
@@ -86,7 +86,7 @@ int get_length (long cc_number)
         cc_number=cc_number/10;
         counter++;
     }
-    printf ("%i\n", counter);
+    //printf ("%i\n", counter);
     return counter;
 }
 
