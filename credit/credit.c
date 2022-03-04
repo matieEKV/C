@@ -25,7 +25,12 @@ int main(void)
     int length = get_length(cc_number);
     int power_1 = length - 1;
     int first_digit = cc_number / pow(10, power_1);
-    printf("%i\n", first_digit);
+    //printf ("%i\n", first_digit);
+    int power_2 = length - 2;
+    int second_digit = cc_number / pow(10, power_2);
+    //printf ("%i\n", second_digit);
+
+    if (first_digit == 4 && length)
 
 
     //if (length)
