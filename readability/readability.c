@@ -3,7 +3,7 @@
 #include <string.h>
 #include <ctype.h>
 
-int count_letters(string text)
+int count_letters(string text);
 
 int main(void)
 {
@@ -11,10 +11,12 @@ int main(void)
     printf ("%s\n", text);
 }
 
-int count_letters(string text)
+int count_letters(string)
 {
+    int count_letters = 0;
     for (int i = 0; i < strlen(text); i++)
     {
         if (isalpha (text))
+        count++
     }
 }
