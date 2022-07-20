@@ -15,6 +15,6 @@ int count_letters(string text)
 {
     for (int i = 0; i < strlen(text); i++)
     {
-        int isalpha (text)
+        if (isalpha (text))
     }
 }
