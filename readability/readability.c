@@ -14,7 +14,7 @@ int main(void)
 
     int letter_count = count_letters(text);
     int word_count = count_words(text);
-    int sentence_count = count_letters(text);
+    int sentence_count = count_sentences(text);
 
 }
 
@@ -53,7 +53,7 @@ int count_letters(string text)
         for (int i = 0; i < strlen(text); i++)
     {
         char punctuation = text[i];
-          if (punctuation == 46) {
+          if (punctuation == 46 || punctuation == 33 || punctuation == 63) {
         counter++;
         }
     }
