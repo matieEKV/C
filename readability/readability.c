@@ -53,7 +53,7 @@ int count_letters(string text)
         for (int i = 0; i < strlen(text); i++)
     {
         char punctuation = text[i];
-          if (punctuation = 46) {
+          if (punctuation == 46) {
         counter++;
         }
     }
