@@ -52,8 +52,8 @@ int count_letters(string text)
         int counter = 0;
         for (int i = 0; i < strlen(text); i++)
     {
-        char white_space = text[i];
-        if (i == "." || i == "!" || i == "?") {
+        char punctuation = text[i];
+        if (punctuation = "." || punctuation = "!" || punctuation = "?") {
         counter++;
         }
     }
