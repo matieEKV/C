@@ -16,7 +16,9 @@ int count_letters(string)
     int count_letters = 0;
     for (int i = 0; i < strlen(text); i++)
     {
-        if (isalpha (text))
+        char individual = text[i];
+        if (isalpha (individual))
         count++
+        printf ("yes"/n);
     }
 }
