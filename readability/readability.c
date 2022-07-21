@@ -20,6 +20,5 @@ int count_letters(void)
         if (isalpha (individual))
         count_letters++;
         printf ("yes\n");
-    }return 0;
     }
 }
