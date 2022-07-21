@@ -18,12 +18,12 @@ int main(void)
     int sentence_count = count_sentences(text);
 
     float L = (float) letter_count /  (float) word_count * 100;
-    printf ("%f\n", L);
+    // printf ("%f\n", L);
     float S = (float) sentence_count / (float) word_count * 100;
-    printf ("%f\n", S);
+    // printf ("%f\n", S);
 
     float index = 0.0588 * L - 0.296 * S - 15.8;
-    printf ("%f\n", index);
+    // printf ("%f\n", index);
 
 }
 
@@ -38,7 +38,7 @@ int count_letters(string text)
         }
 
     }
-    printf("%i letters\n", counter);
+    // printf("%i letters\n", counter);
     return counter;
 }
 
@@ -52,7 +52,7 @@ int count_letters(string text)
         counter++;
         }
     }
-    printf("%i words\n", counter);
+    // printf("%i words\n", counter);
     return counter;
     }
 
@@ -66,6 +66,6 @@ int count_letters(string text)
         counter++;
         }
     }
-    printf("%i sentences\n", counter);
+    // printf("%i sentences\n", counter);
     return counter;
     }
