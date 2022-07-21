@@ -22,9 +22,17 @@ int main(void)
     float S = (float) sentence_count / (float) word_count * 100;
     // printf ("%f\n", S);
 
-    round index = 0.0588 * L - 0.296 * S - 15.8;
+    float index = 0.0588 * L - 0.296 * S - 15.8;
     // printf ("%f\n", index);
-
+    if (index < 1){
+        printf ("Before Grade 1");
+    }
+    if (index >= 16){
+        printf ("Grade 16+");
+    }
+    else {
+        printf ("Grade )
+    }
 }
 
 int count_letters(string text)
