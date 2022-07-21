@@ -20,8 +20,10 @@ int count_letters(string text)
     {
         char individual = text[i];
         if (isalpha (individual))
+        {
         counter++;
         printf ("yes\n");
+        }
     }
     return 0;
 }
