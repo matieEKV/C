@@ -21,8 +21,9 @@ int count_letters(string text)
         char individual = text[i];
         if (isalpha (individual)) {
         counter++;
-        printf("There are %i letters\n", counter);
         }
+
     }
+    // printf("There are %i letters\n", counter);
     return counter;
 }
