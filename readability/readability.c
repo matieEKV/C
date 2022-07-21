@@ -51,7 +51,7 @@ int count_letters(string text)
         for (int i = 0; i < strlen(text); i++)
     {
         char white_space = text[i];
-        if (isspace (white_space)) {
+        if (i == "." ) {
         counter++;
         }
     }
