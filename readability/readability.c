@@ -22,7 +22,7 @@ int main(void)
     float S = (float) sentence_count / (float) word_count * 100;
     // printf ("%f\n", S);
 
-    float index = 0.0588 * L - 0.296 * S - 15.8;
+    round index = 0.0588 * L - 0.296 * S - 15.8;
     // printf ("%f\n", index);
 
 }
