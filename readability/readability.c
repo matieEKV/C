@@ -47,7 +47,7 @@ int count_letters(string text)
 
     int count_sentences (string text)
     {
-        int counter = 1;
+        int counter = 0;
         for (int i = 0; i < strlen(text); i++)
     {
         char white_space = text[i];
