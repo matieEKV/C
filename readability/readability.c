@@ -16,6 +16,8 @@ int main(void)
     int word_count = count_words(text);
     int sentence_count = count_sentences(text);
 
+    int index = 0.0588 * L - 0.296 * S - 15.8
+
 }
 
 int count_letters(string text)
