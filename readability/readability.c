@@ -13,12 +13,12 @@ int main(void)
 
 int count_letters(void)
 {
-    int count_letters = 0;
+    int counter = 0;
     for (int i = 0; i < strlen(text); i++)
     {
         char individual = text[i];
         if (isalpha (individual))
-        count_letters++;
+        counter++;
         printf ("yes\n");
     }
 }
