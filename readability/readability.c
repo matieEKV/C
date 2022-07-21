@@ -27,10 +27,9 @@ int main(void)
     if (index < 1){
         printf ("Before Grade 1\n");
     }
-    if (index >= 16){
+    if (index >= 16) {
         printf ("Grade 16+\n");
-    }
-    else if (index > 1 && index < 15){
+    } else if (index > 1 && index < 15){
         printf ("Grade %.0f\n", round(index));
     }
 }
@@ -38,11 +37,10 @@ int main(void)
 int count_letters(string text)
 {
     int counter = 0;
-    for (int i = 0; i < strlen(text); i++)
-    {
+    for (int i = 0; i < strlen(text); i++) {
         char individual = text[i];
         if (isalpha (individual)) {
-        counter++;
+            counter++;
         }
 
     }
@@ -50,30 +48,28 @@ int count_letters(string text)
     return counter;
 }
 
-    int count_words (string text)
-    {
-        int counter = 1;
-        for (int i = 0; i < strlen(text); i++)
-    {
+int count_words (string text)
+{
+    int counter = 1;
+    for (int i = 0; i < strlen(text); i++) {
         char white_space = text[i];
         if (isspace (white_space)) {
-        counter++;
+            counter++;
         }
     }
     // printf("%i words\n", counter);
     return counter;
-    }
+}
 
-    int count_sentences (string text)
-    {
-        int counter = 0;
-        for (int i = 0; i < strlen(text); i++)
-    {
+int count_sentences (string text)
+{
+    int counter = 0;
+    for (int i = 0; i < strlen(text); i++) {
         char punctuation = text[i];
-          if (punctuation == 46 || punctuation == 33 || punctuation == 63) {
-        counter++;
+        if (punctuation == 46 || punctuation == 33 || punctuation == 63) {
+            counter++;
         }
     }
     // printf("%i sentences\n", counter);
     return counter;
-    }
+}
