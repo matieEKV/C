@@ -5,6 +5,7 @@
 
 int count_letters(string text);
 int count_words (string text);
+int count_sentences(string text);
 
 int main(void)
 {
@@ -13,6 +14,7 @@ int main(void)
 
     int letter_count = count_letters(text);
     int word_count = count_words(text);
+    int sentence_count = count_letters(text);
 
 }
 
@@ -51,10 +53,10 @@ int count_letters(string text)
         for (int i = 0; i < strlen(text); i++)
     {
         char white_space = text[i];
-        if (i == "." ) {
+        if (i == "." || i == "!" || i == "?") {
         counter++;
         }
     }
-    printf("%i words\n", counter);
+    printf("%i sentences\n", counter);
     return counter;
     }
