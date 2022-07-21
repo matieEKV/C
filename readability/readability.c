@@ -27,3 +27,17 @@ int count_letters(string text)
     printf("%i letters\n", counter);
     return counter;
 }
+
+    int count_words (string text)
+    {
+        int counter = 0;
+        for (int i = 1; i < strlen(text); i++)
+    {
+        char individual = text[i];
+        if (isspace (individual)) {
+        counter++;
+        }
+    }
+    printf("%i letters\n", counter);
+    return counter;
+    }
