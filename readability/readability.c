@@ -30,7 +30,7 @@ int main(void)
     if (index >= 16){
         printf ("Grade 16+");
     }
-    else {
+    else if (index > 1 && index < 15){
         printf ("Grade %.0f\n", round(index));
     }
 }
