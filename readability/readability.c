@@ -31,7 +31,7 @@ int main(void)
         printf ("Grade 16+");
     }
     else {
-        printf ("Grade )
+        printf ("Grade %f\n", round(index));
     }
 }
 
