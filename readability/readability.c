@@ -11,14 +11,15 @@ int main(void)
     printf ("%s\n", text);
 }
 
-int count_letters(string text)
+int count_letters(void)
 {
     int count_letters = 0;
     for (int i = 0; i < strlen(text); i++)
     {
         char individual = text[i];
         if (isalpha (individual))
-        count_letters++
-        printf ("yes"/n);
+        count_letters++;
+        printf ("yes\n");
+    }return 0;
     }
 }
