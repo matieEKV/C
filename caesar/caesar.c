@@ -15,7 +15,7 @@ int main(int argc, string argv[])
     else
     {
         // printf("arg: %s\n", argv[1]);
-        string input = argv[1];
+        // string input = argv[1];
 
         if (isdigit())
         {
@@ -30,13 +30,14 @@ bool only_digits(string s)
 {
     for (int i = 0; i < strlen(s); i++)
     char argument1 = s[i];
-        if (isspace(argument1))
+        if (isdigit(argument1))
         {
             printf("good job! \n);
-            return 
+            return 1;
         }
         else
         {
              printf("uh oh\n");
+             return 0;
         }
 }
