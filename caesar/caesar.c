@@ -4,18 +4,16 @@
 
 int main(int argc, string argv[])
 {
-    if (argc != 2)
+    if (argc == 2)
     {
-        printf ("Usage: ./caesar key\n");
-        return 1;
+        printf ("good\n");
     }
-    if (isdigit(argv[2]))
+    // if (isdigit(argv[2]))
     {
         printf("good\n");
     }
-    // else
+    else (argc != 2)
     {
-        printf ("Usage: ./caesar key\n");
-        return 1;
+        printf ("not good\n");
     }
 }
