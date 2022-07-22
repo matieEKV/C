@@ -1,6 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 #include <ctype.h>
+#include <string.h>
 
 bool only_digits(string s);
 
@@ -20,10 +21,7 @@ int main(int argc, string argv[])
         {
             printf("great\n");
         }
-         else
-        {
-             printf("uh oh\n");
-        }
+
     }
 
 }
@@ -35,5 +33,9 @@ bool only_digits(string s)
         if (isspace(argument1))
         {
             printf("good job! \n);
+        }
+        else
+        {
+             printf("uh oh\n");
         }
 }
