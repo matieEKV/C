@@ -6,14 +6,12 @@ int main(int argc, string argv[])
 {
     if (argc != 2)
     {
-        printf ("not good\n");
+        printf ("Usage: ./caesar key\n");
+        return 1;
     }
-    // if (isdigit(argv[2]))
+    else
     {
-        // printf("good\n");
+        printf("good\n");
     }
-    // else
-    {
-        // printf ("not good\n");
-    }
+
 }
