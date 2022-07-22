@@ -17,7 +17,7 @@ int main(int argc, string argv[])
         // printf("arg: %s\n", argv[1]);
         // string input = argv[1];
 
-        if (isdigit())
+        if (only_digits
         {
             printf("great\n");
         }
