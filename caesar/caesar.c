@@ -30,5 +30,5 @@ int main(int argc, string argv[])
 
 bool only_digits(string s)
 {
-    for 
+    for (int i = 0; i < strlen(string); i++)
 }
