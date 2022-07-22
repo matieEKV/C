@@ -31,4 +31,9 @@ int main(int argc, string argv[])
 bool only_digits(string s)
 {
     for (int i = 0; i < strlen(s); i++)
+    char argument1 = s[i];
+        if (isspace(argument1))
+        {
+            printf("good job! \n);
+        }
 }
