@@ -33,6 +33,7 @@ bool only_digits(string s)
         if (isspace(argument1))
         {
             printf("good job! \n);
+            return 
         }
         else
         {
