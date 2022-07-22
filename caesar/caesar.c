@@ -48,5 +48,5 @@ bool only_digits(string s)
             printf ("wow, good!\n");
             return true;
         }
-        return true;
+        return false;
 }
