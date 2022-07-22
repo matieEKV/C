@@ -28,9 +28,10 @@ int main(int argc, string argv[])
 
 bool only_digits(string s)
 {
+    bool result = false;
     for (int i = 0; i < strlen(s); i++)
     {
-    char argument1 = s[i];
+        char argument1 = s[i];
         if (isdigit(argument1))
         {
             printf("good job!\n");
@@ -42,5 +43,5 @@ bool only_digits(string s)
              return false;
         }
       }
-      
+
 }
