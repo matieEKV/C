@@ -36,7 +36,7 @@ bool only_digits(string s)
         {
             counter++;
         }
-        if ()
+        if (strlen)
         else
         {
              printf("uh oh\n");
