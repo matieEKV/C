@@ -16,9 +16,9 @@ int main(int argc, string argv[])
         {
             printf("great\n");
         }
-        else
+        // else
         {
-            printf("uh oh\n");
+            // printf("uh oh\n");
         }
     }
 
