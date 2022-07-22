@@ -30,17 +30,12 @@ bool only_digits(string s)
 {
     int counter = 0;
     int length = strlen(s);
-    for (int i = 0; i < strlen(s); i++)
+    for (int i = 0; i < length; i++)
     {
         char argument1 = s[i];
         if (isdigit(argument1))
         {
             counter++;
-        }
-        if (length == counter)
-        {
-            printf ("wow, good!\n");
-            return true;
         }
         else
         {
@@ -48,5 +43,10 @@ bool only_digits(string s)
              return false;
         }
       }
+      if (length == counter)
+        {
+            printf ("wow, good!\n");
+            return true;
+        }
         return true;
 }
