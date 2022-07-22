@@ -14,6 +14,6 @@ int main(int argc, string argv[])
     }
     // else
     {
-        printf ("not good\n");
+        // printf ("not good\n");
     }
 }
