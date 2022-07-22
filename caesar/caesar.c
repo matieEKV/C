@@ -11,7 +11,10 @@ int main(int argc, string argv[])
     }
     else
     {
-        printf("good\n");
+        if (isdigit(argv[2]))
+        {
+            printf("great\n");
+        }
     }
 
 }
