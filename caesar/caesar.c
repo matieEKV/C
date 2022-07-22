@@ -4,15 +4,15 @@
 
 int main(int argc, string argv[])
 {
-    if (argc == 2)
+    if (argc != 2)
     {
-        printf ("good\n");
+        printf ("not good\n");
     }
     // if (isdigit(argv[2]))
     {
-        printf("good\n");
+        // printf("good\n");
     }
-    else (argc != 2)
+    // else
     {
         printf ("not good\n");
     }
