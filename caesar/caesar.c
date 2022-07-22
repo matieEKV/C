@@ -9,5 +9,5 @@ int main(int argc, string argv[])
         printf ("Usage: ./caesar key\n");
         return 1;
     }
-    
+    if (isdigit(argv[2]))
 }
