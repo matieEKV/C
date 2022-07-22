@@ -28,7 +28,6 @@ int main(int argc, string argv[])
 
 bool only_digits(string s)
 {
-    bool result = false;
     for (int i = 0; i < strlen(s); i++)
     {
         char argument1 = s[i];
