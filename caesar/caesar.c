@@ -43,23 +43,24 @@ bool only_digits(string s)
              return false;
         }
       }
-      if (length == counter)
+      if (length == counter && length > 0)
         {
             printf ("wow, good!\n");
             return true;
         }
+        printf("uh oh 1\n");
         return false;
 }
 
 
-bool result = false;
+// bool result = false;
 
-for ... {
-    char item = string[i];
-    if (isdigit(item)) {
-        result = true;
-    } else {
-        return false;
-    }
-}
-return result;
+// for ... {
+//     char item = string[i];
+//     if (isdigit(item)) {
+//         result = true;
+//     } else {
+//         return false;
+//     }
+// }
+// return result;
