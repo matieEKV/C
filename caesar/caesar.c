@@ -33,11 +33,11 @@ bool only_digits(string s)
         if (isdigit(argument1))
         {
             printf("good job! \n);
-            return 1;
+            return true;
         }
         else
         {
              printf("uh oh\n");
-             return 0;
+             return false;
         }
 }
