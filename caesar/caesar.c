@@ -50,3 +50,16 @@ bool only_digits(string s)
         }
         return false;
 }
+
+
+bool result = false;
+
+for ... {
+    char item = string[i];
+    if (isdigit(item)) {
+        result = true;
+    } else {
+        return false;
+    }
+}
+return result;
