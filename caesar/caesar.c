@@ -11,8 +11,8 @@ int main(int argc, string argv[])
     }
     else
     {
-        printf("arg: %s\n", argv[1]);
-        if (isdigit(argv[2]))
+        // printf("arg: %s\n", argv[1]);
+        if (isdigit(argv[1]))
         {
             printf("great\n");
         }
