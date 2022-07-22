@@ -12,7 +12,7 @@ int main(int argc, string argv[])
     else
     {
         // printf("arg: %s\n", argv[1]);
-        if (isdigit((unsigned char) argv[1]))
+        if (isdigit((unsigned char)argv[1]))
         {
             printf("great\n");
         }
