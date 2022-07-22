@@ -28,14 +28,15 @@ int main(int argc, string argv[])
 
 bool only_digits(string s)
 {
+    int counter = 0;
     for (int i = 0; i < strlen(s); i++)
     {
         char argument1 = s[i];
         if (isdigit(argument1))
         {
-            printf("good job!\n");
-            return true;
+            counter++;
         }
+        if ()
         else
         {
              printf("uh oh\n");
