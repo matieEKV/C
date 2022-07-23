@@ -63,7 +63,12 @@ char rotate(char c, int n)
 {
     for (int i = 0; i < strlen(s); i++)
     {
-        //isalpha
+//check for aphabetical characters in the user input
+        char individual = text[i];
+        if (isalpha(individual))
+        {
+            counter++;
+        }
     }
 }
 
