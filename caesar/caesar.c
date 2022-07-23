@@ -5,6 +5,7 @@
 #include <stdlib.h>
 
 bool only_digits(string s);
+char rotate(char c, int n);
 
 int main(int argc, string argv[])
 {
@@ -25,7 +26,7 @@ int main(int argc, string argv[])
 // convert input string into an int
             int key = atoi (argv[1]);
             //printf("the key is %i\n", key);
-            
+
         }
 
     }
@@ -57,6 +58,8 @@ bool only_digits(string s)
         // printf("uh oh 1\n");
         return false;
 }
+
+char rotate(char c, int n)
 
 
 // bool result = false;
