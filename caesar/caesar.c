@@ -30,6 +30,12 @@ int main(int argc, string argv[])
         }
 // ask user for plaintext input
         string plaintext = get_string("plaintext:  ");
+       for (int i = 0; i < plaintext; i++)
+       {
+        char c = plaintext[i];
+        char rotate(char c, int n);
+        
+       }
     }
 
 }
