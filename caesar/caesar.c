@@ -24,7 +24,7 @@ int main(int argc, string argv[])
         if (only_digits(argv[1]) == true)
         {
 // convert input string into an int
-            int n = atoi (argv[1]);
+            int key = atoi (argv[1]);
             //printf("the key is %i\n", key);
 
         }
@@ -34,6 +34,7 @@ int main(int argc, string argv[])
        for (int i = 0; i < strlen(plaintext); i++)
        {
         char c = plaintext[i];
+        int n = key;
         char rotated = rotate(c, n);
         printf ("cyphertext:  %c", rotated);
 
