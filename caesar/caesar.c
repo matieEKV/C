@@ -21,7 +21,7 @@ int main(int argc, string argv[])
         // string input = argv[1];
 
         //check if the bool is true, that is if the key cointains only digits
-        if (only_digits(argv[1]) == true)
+        if (only_digits(argv[1]))
         {
             // convert input string into an int
             int n = atoi (argv[1]);
