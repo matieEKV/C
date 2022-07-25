@@ -36,7 +36,7 @@ int main(int argc, string argv[])
                 char rotated = rotate(c, n);
                 printf("%c", rotated);
             }
-            printf ("...");
+            printf ("\n");
         }
         else
         {
