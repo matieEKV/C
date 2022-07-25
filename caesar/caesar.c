@@ -63,6 +63,26 @@ bool only_digits(string s)
 
 char rotate(char c, int n)
 {
+    int alpha_index = 0;
+    if (isalpha(c))
+        {
+            if (islower(c))
+            {
+                alpha_index = c - 'a'
+                printf ("check lower %i/n", c);
+            }
+            if (isupper(c))
+            {
+               alpha_index = c - 'A'
+                printf ("check upper %i/n", c);
+            }
+        }
+}
+
+
+
+
+
     char b = plaintext[i];
     for (int i = 0; i < strlen(plaintext); i++)
     {
