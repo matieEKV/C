@@ -81,6 +81,9 @@ char rotate(char c, int n)
             }
 
         }
+        return 0;
+}
+return 0;
 }
 
 // bool result = false;
