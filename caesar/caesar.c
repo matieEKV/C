@@ -70,17 +70,18 @@ char rotate(char c, int n)
             if (islower(c))
             {
                 alpha_index = c - 'a';
-                cypher = (alpha_index + n) % 26
-                
-
+                cypher = (alpha_index + n) % 26;
+                char cyphered = cypher + 'a';
                 printf ("check lower %i/n", c);
-                return c;
+                return cyphered;
             }
             if (isupper(c))
             {
                alpha_index = c - 'A';
-                printf ("check upper %i/n", c);
-                return c;
+               cypher = (alpha_index + n) % 26;
+               char cyphered = cypher + 'a';
+               printf ("check upper %i/n", c);
+               return cyphered;
             }
         }
         return c;
