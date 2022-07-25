@@ -69,7 +69,7 @@ char rotate(char c, int n)
         char c = plaintext[i];
         if (islower(c))
         {
-            
+            char c = [i] - 
         }
 //check for aphabetical characters in the user input
         char individual = text[i];
