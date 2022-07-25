@@ -30,11 +30,12 @@ int main(int argc, string argv[])
         }
 // ask user for plaintext input
         string plaintext = get_string("plaintext:  ");
-       for (int i = 0; i < plaintext; i++)
+       for (int i = 0; i < strlen(plaintext); i++)
        {
         char c = plaintext[i];
         char rotate(char c, int n);
-        
+        printf ("cyphertext:  %s", plaintext);
+
        }
     }
 
@@ -78,7 +79,7 @@ char rotate(char c, int n)
                 alpha_index = c - 'a';
                 cypher = (alpha_index + n) % 26;
                 char cyphered = cypher + 'a';
-                printf ("check lower %i/n", c);
+                printf ("check lower %c/n", cyphered);
                 return cyphered;
             }
             if (isupper(c))
@@ -86,7 +87,7 @@ char rotate(char c, int n)
                alpha_index = c - 'A';
                cypher = (alpha_index + n) % 26;
                char cyphered = cypher + 'a';
-               printf ("check upper %i/n", c);
+               printf ("check upper %c/n", cyphered);
                return cyphered;
             }
         }
