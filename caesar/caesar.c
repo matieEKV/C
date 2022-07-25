@@ -33,11 +33,11 @@ int main(int argc, string argv[])
             {
                 char c = plaintext[i];
                 char rotated = rotate(c, n);
-                printf ("cyphertext:  %c", rotated);
+                printf("%c", rotated);
             }
         }
     }
-
+    printf("\n");
 }
 
 //check whether key cointains only digits
@@ -78,15 +78,15 @@ char rotate(char c, int n)
                 alpha_index = c - 'a';
                 cypher = (alpha_index + n) % 26;
                 char cyphered = cypher + 'a';
-                printf ("check lower %c/n", cyphered);
+                // printf ("check lower %c\n", cyphered);
                 return cyphered;
             }
             if (isupper(c))
             {
                alpha_index = c - 'A';
                cypher = (alpha_index + n) % 26;
-               char cyphered = cypher + 'a';
-               printf ("check upper %c/n", cyphered);
+               char cyphered = cypher + '';
+            //    printf ("check upper %c/n", cyphered);
                return cyphered;
             }
         }
