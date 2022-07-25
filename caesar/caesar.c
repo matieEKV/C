@@ -63,9 +63,14 @@ bool only_digits(string s)
 
 char rotate(char c, int n)
 {
-    char c = plaintext[i];
+    string plaintext[i];
     for (int i = 0; i < strlen(plaintext); i++)
     {
+        char c = plaintext[i];
+        if (islower(c))
+        {
+            
+        }
 //check for aphabetical characters in the user input
         char individual = text[i];
         if (isalpha(individual))
