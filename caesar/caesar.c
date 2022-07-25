@@ -66,14 +66,14 @@ char rotate(char c, int n)
     string plaintext;
     for (int i = 0; i < strlen(plaintext); i++)
     {
-        char individual = plaintext[i];
-        if (islower(individual))
+        char at_index = plaintext[i];
+        if (islower(at_index))
         {
-            char n = plaintext [i] - 97;
+            char new_lower = plaintext[i] - 97;
         }
-        if (isupper(individual))
+        if (isupper(at_index))
         {
-            char individual = plaintext [i] - 65;
+            char new_upper = plaintext[i] - 65;
         }
 //check for aphabetical characters in the user input
         char individual = text[i];
