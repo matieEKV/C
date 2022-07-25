@@ -30,7 +30,6 @@ int main(int argc, string argv[])
         }
 // ask user for plaintext input
         string plaintext = get_string("plaintext:  ");
-        char c = plaintext[i];
     }
 
 }
@@ -64,22 +63,22 @@ bool only_digits(string s)
 
 char rotate(char c, int n)
 {
-    // char c = plaintext[i];
+    char b = plaintext[i];
     for (int i = 0; i < strlen(plaintext); i++)
     {
 //check for aphabetical characters in the user input
         int alpha_index = 0;
-        if (isalpha(c))
+        if (isalpha(b))
         {
-            if (islower(c))
+            if (islower(b))
             {
-                alpha_index = c - 'a'
-                printf ("check lower %i/n", c);
+                alpha_index = b - 'a'
+                printf ("check lower %i/n", b);
             }
-            if (isupper(c))
+            if (isupper(b))
             {
-               alpha_index = c - 'A'
-                printf ("check upper %i/n", c);
+               alpha_index = b - 'A'
+                printf ("check upper %i/n", b);
             }
 
         }
