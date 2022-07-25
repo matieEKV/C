@@ -29,12 +29,14 @@ int main(int argc, string argv[])
             // ask user for plaintext input
             string plaintext = get_string("plaintext:  ");
             //rotate each character in a string for n numbers using a rotate function
+            printf ("ciphertext: ");
             for (int i = 0; i < strlen(plaintext); i++)
             {
                 char c = plaintext[i];
                 char rotated = rotate(c, n);
                 printf("%c", rotated);
             }
+            printf ("...");
         }
     }
 }
