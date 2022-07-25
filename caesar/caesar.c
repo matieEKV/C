@@ -70,7 +70,8 @@ char rotate(char c, int n)
             if (islower(c))
             {
                 alpha_index = c - 'a';
-                cypher = (alpha_index + n)%26
+                cypher = (alpha_index + n) % 26
+                
 
                 printf ("check lower %i/n", c);
                 return c;
