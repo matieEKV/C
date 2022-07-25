@@ -65,11 +65,10 @@ bool only_digits(string s)
     }
     if (length == counter && length > 0)
     {
-        // printf ("wow, good!\n");
         return true;
     }
-        // printf("uh oh 1\n");
-        return false;
+
+    return false;
 }
 // rotate each character in a string for n numbers
 char rotate(char c, int n)
@@ -77,36 +76,24 @@ char rotate(char c, int n)
     int alpha_index = 0;
     int cypher = 0;
     if (isalpha(c))
+    {
+        if (islower(c))
         {
-            if (islower(c))
-            {
-                alpha_index = c - 'a';
-                cypher = (alpha_index + n) % 26;
-                char cyphered = cypher + 'a';
-                // printf ("check lower %c\n", cyphered);
-                return cyphered;
-            }
-            if (isupper(c))
-            {
-               alpha_index = c - 'A';
-               cypher = (alpha_index + n) % 26;
-               char cyphered = cypher + 'A';
-            //    printf ("check upper %c/n", cyphered);
-               return cyphered;
-            }
+            alpha_index = c - 'a';
+            cypher = (alpha_index + n) % 26;
+            char cyphered = cypher + 'a';
+            return cyphered;
         }
-        return c;
+        if (isupper(c))
+        {
+            alpha_index = c - 'A';
+            cypher = (alpha_index + n) % 26;
+            char cyphered = cypher + 'A';
+            //    printf ("check upper %c/n", cyphered);
+            return cyphered;
+        }
+    }
+    return c;
 }
 
 
-// bool result = false;
-
-// for ... {
-//     char item = string[i];
-//     if (isdigit(item)) {
-//         result = true;
-//     } else {
-//         return false;
-//     }
-// }
-// return result;
