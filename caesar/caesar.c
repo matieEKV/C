@@ -20,22 +20,22 @@ int main(int argc, string argv[])
         // printf("arg: %s\n", argv[1]);
         // string input = argv[1];
 
-//check if the bool is true, that is if the key cointains only digits
+        //check if the bool is true, that is if the key cointains only digits
         if (only_digits(argv[1]) == true)
         {
-// convert input string into an int
+            // convert input string into an int
             int n = atoi (argv[1]);
             //printf("the key is %i\n", key);
-// ask user for plaintext input
-        string plaintext = get_string("plaintext:  ");
-//rotate each character in a string for n numbers using a rotate function
-       for (int i = 0; i < strlen(plaintext); i++)
-       {
-        char c = plaintext[i];
-        char rotated = rotate(c, n);
-       }
-       printf ("cyphertext:  %c", rotated);
-       }
+            // ask user for plaintext input
+            string plaintext = get_string("plaintext:  ");
+            //rotate each character in a string for n numbers using a rotate function
+            for (int i = 0; i < strlen(plaintext); i++)
+            {
+                char c = plaintext[i];
+                char rotated = rotate(c, n);
+            }
+            printf ("cyphertext:  %c", rotated);
+        }
     }
 
 }
