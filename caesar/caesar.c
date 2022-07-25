@@ -24,7 +24,7 @@ int main(int argc, string argv[])
         if (only_digits(argv[1]) == true)
         {
 // convert input string into an int
-            int key = atoi (argv[1]);
+            int n = atoi (argv[1]);
             //printf("the key is %i\n", key);
 
         }
