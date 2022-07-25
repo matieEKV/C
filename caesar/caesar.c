@@ -37,7 +37,6 @@ int main(int argc, string argv[])
             }
         }
     }
-    printf("\n");
 }
 
 //check whether key cointains only digits
