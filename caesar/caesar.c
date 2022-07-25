@@ -68,44 +68,20 @@ char rotate(char c, int n)
         {
             if (islower(c))
             {
-                alpha_index = c - 'a'
+                alpha_index = c - 'a';
                 printf ("check lower %i/n", c);
+                return c;
             }
             if (isupper(c))
             {
-               alpha_index = c - 'A'
+               alpha_index = c - 'A';
                 printf ("check upper %i/n", c);
+                return c;
             }
-        }
-}
-
-
-
-
-
-    char b = plaintext[i];
-    for (int i = 0; i < strlen(plaintext); i++)
-    {
-//check for aphabetical characters in the user input
-        int alpha_index = 0;
-        if (isalpha(b))
-        {
-            if (islower(b))
-            {
-                alpha_index = b - 'a'
-                printf ("check lower %i/n", b);
-            }
-            if (isupper(b))
-            {
-               alpha_index = b - 'A'
-                printf ("check upper %i/n", b);
-            }
-
         }
         return c;
 }
-return 0;
-}
+
 
 // bool result = false;
 
