@@ -70,18 +70,19 @@ char rotate(char c, int n)
         int alpha_index = 0;
         if (isalpha(c))
         {
-            char at_index = plaintext[i];
-            if (islower(at_index))
+            if (islower(c))
             {
-                char new_lower = plaintext[i] - 97;
+                alpha_index = c - 'a'
+                printf ("check lower %i/n", c);
             }
-            if (isupper(at_index))
+            if (isupper(c))
             {
-                char new_upper = plaintext[i] - 65;
+               alpha_index = c - 'A'
+                printf ("check upper %i/n", c);
             }
 
         }
-        return 0;
+        return c;
 }
 return 0;
 }
