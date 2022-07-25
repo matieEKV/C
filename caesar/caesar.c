@@ -33,8 +33,8 @@ int main(int argc, string argv[])
             {
                 char c = plaintext[i];
                 char rotated = rotate(c, n);
+                printf ("cyphertext:  %c", rotated);
             }
-            printf ("cyphertext:  %c", rotated);
         }
     }
 
