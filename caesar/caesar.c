@@ -34,8 +34,8 @@ int main(int argc, string argv[])
        for (int i = 0; i < strlen(plaintext); i++)
        {
         char c = plaintext[i];
-        char rotate(char c, int n);
-        printf ("cyphertext:  %s", plaintext);
+        char rotated = rotate(c, n);
+        printf ("cyphertext:  %c", rotated);
 
        }
     }
