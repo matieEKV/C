@@ -28,7 +28,8 @@ int main(int argc, string argv[])
             //printf("the key is %i\n", key);
 
         }
-        string plaintext = get_string("plaintext: ");
+        string plaintext = get_string("Plaintext: ");
+        
     }
 
 }
