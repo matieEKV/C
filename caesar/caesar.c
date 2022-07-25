@@ -85,7 +85,7 @@ char rotate(char c, int n)
             {
                alpha_index = c - 'A';
                cypher = (alpha_index + n) % 26;
-               char cyphered = cypher + '';
+               char cyphered = cypher + 'A';
             //    printf ("check upper %c/n", cyphered);
                return cyphered;
             }
