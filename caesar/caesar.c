@@ -38,6 +38,10 @@ int main(int argc, string argv[])
             }
             printf ("...");
         }
+        else
+        {
+            return 1;
+        }
     }
 }
 
