@@ -64,11 +64,14 @@ bool only_digits(string s)
 char rotate(char c, int n)
 {
     int alpha_index = 0;
+    int cypher = 0;
     if (isalpha(c))
         {
             if (islower(c))
             {
                 alpha_index = c - 'a';
+                cypher = (alpha_index + n)%26
+
                 printf ("check lower %i/n", c);
                 return c;
             }
