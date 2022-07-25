@@ -28,11 +28,13 @@ int main(int argc, string argv[])
             //printf("the key is %i\n", key);
 
         }
+// ask user for plaintext input
         string plaintext = get_string("plaintext:  ");
     }
 
 }
 
+//check whether key cointains only digits
 bool only_digits(string s)
 {
     int counter = 0;
@@ -61,6 +63,7 @@ bool only_digits(string s)
 
 char rotate(char c, int n)
 {
+    char c = plaintext[i];
     for (int i = 0; i < strlen(plaintext); i++)
     {
 //check for aphabetical characters in the user input
