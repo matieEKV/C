@@ -12,7 +12,7 @@ int main(int argc, string argv[])
 //check if the main takes in 2 arguments
     if (argc != 2)
     {
-        printf ("Usage: ./caesar key\n");
+        printf("Usage: ./caesar key\n");
         return 1;
     }
     else
@@ -24,19 +24,19 @@ int main(int argc, string argv[])
         if (only_digits(argv[1]))
         {
             // convert input string into an int
-            int n = atoi (argv[1]);
+            int n = atoi(argv[1]);
             //printf("the key is %i\n", key);
             // ask user for plaintext input
             string plaintext = get_string("plaintext:  ");
             //rotate each character in a string for n numbers using a rotate function
-            printf ("ciphertext: ");
+            printf("ciphertext: ");
             for (int i = 0; i < strlen(plaintext); i++)
             {
                 char c = plaintext[i];
                 char rotated = rotate(c, n);
                 printf("%c", rotated);
             }
-            printf ("\n");
+            printf("\n");
         }
         else
         {
@@ -59,15 +59,15 @@ bool only_digits(string s)
         }
         else
         {
-             printf("uh oh\n");
-             return false;
+            printf("uh oh\n");
+            return false;
         }
-      }
-      if (length == counter && length > 0)
-        {
-            // printf ("wow, good!\n");
-            return true;
-        }
+    }
+    if (length == counter && length > 0)
+    {
+        // printf ("wow, good!\n");
+        return true;
+    }
         // printf("uh oh 1\n");
         return false;
 }
