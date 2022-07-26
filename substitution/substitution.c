@@ -21,7 +21,7 @@ int key_check(string s)
     for (int i = 0; i < length; i++)
     {
         char individual = s[i];
-        if (isdigit(individual))
+        if (isalpha(individual))
         {
             counter++;
         }
