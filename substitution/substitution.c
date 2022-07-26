@@ -26,7 +26,12 @@ int key_check(string s)
         {
             counter1++;
         }
-        if (isalpha(individual))
+        else
+        {
+            printf("The key must be alphabetical\n");
+        }
+    }
+    if (isalpha(individual))
         {
             counter1++;
         }
