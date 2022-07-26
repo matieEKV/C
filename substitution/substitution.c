@@ -16,14 +16,19 @@ int main(int argc, string argv[])
 
 int key_check(string s)
 {
-    int counter = 0;
+    int counter1 = 0;
+    int counter2 = 0;
     int length = strlen(s);
     for (int i = 0; i < length; i++)
     {
         char individual = s[i];
+        if (isalpha(individual) && ())
+        {
+            counter1++;
+        }
         if (isalpha(individual))
         {
-            counter++;
+            counter1++;
         }
     }
 
