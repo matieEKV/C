@@ -95,5 +95,3 @@ char rotate(char c, int n)
     }
     return c;
 }
-
-
