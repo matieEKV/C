@@ -19,7 +19,7 @@ int main(int argc, string argv[])
         string s1 = "abcdefghijklmnopqrstuvwxyz";
     if (strcasecmp(argv[1], s1) == 0)
         {
-            printf("they are equal!/n");
+            printf("they are equal!\n");
         }
     else
     {
