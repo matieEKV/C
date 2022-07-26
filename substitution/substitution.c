@@ -38,16 +38,17 @@ int key_check(string s)
             return 1;
         }
     }
-    string s1 = 'abcdefghijklmnopqrstuvwxyz';
+    string s1 = "abcdefghijklmnopqrstuvwxyz";
     if (strcasecmp(s, s1) == 0)
         {
-            return 0
+            return 0;
             printf("they are equal!/n");
         }
+    return 1;
     }
 
 
-bool final_key_check (int k)
-{
+// bool final_key_check (int k)
+// {
 
-}
+// }
