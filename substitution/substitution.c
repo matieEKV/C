@@ -16,7 +16,16 @@ int main(int argc, string argv[])
 
 int key_check(string s)
 {
-    
+    int counter = 0;
+    int length = strlen(s);
+    for (int i = 0; i < length; i++)
+    {
+        char individual = s[i];
+        if (isdigit(individual))
+        {
+            counter++;
+        }
+    }
 
 }
 
