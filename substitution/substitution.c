@@ -1,7 +1,8 @@
 #include <cs50.h>
 #include <stdio.h>
 
-bool key_check (string s);
+bool final_key_check (int k);
+int key_check (string s;);
 
 int main(int argc, string argv[])
 {
@@ -13,7 +14,13 @@ int main(int argc, string argv[])
     else
 }
 
-bool key_check (string s)
+int key_check(string s)
 {
     
+
+}
+
+bool final_key_check (int k)
+{
+
 }
