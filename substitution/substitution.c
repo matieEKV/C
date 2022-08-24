@@ -43,7 +43,6 @@ int key_check1(string s)
             printf("The key must be alphabetical\n");
             return 1;
         }
-        printf("checked %i times\n", counter);
     }
     if (length != 26)
     {
