@@ -22,8 +22,8 @@ int main(int argc, string argv[])
         else {
             printf("not good\n");
         }
-    }
 }
+
 
 
 //function checks whether key is alphabetical and if the key is 26 characters long
