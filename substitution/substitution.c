@@ -58,8 +58,7 @@ int key_check1(string s)
 //function checks for repeating characters
 int key_check2(string s)
 {
-    int repeating_character = s[i];
-        for (i = 0; i < strlen(s); i++)
+        for (int i = 0; i < strlen(s); i++)
         {
             for (j = i + 1; j < strlen(s); j++)
             {
