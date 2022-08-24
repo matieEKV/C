@@ -70,7 +70,11 @@ int key_check2(string s)
                     printf("key cannot have repeating characters\n");
                     return 1;
                 }
-            
+                else
+                {
+                    return 0;
+                }
+
             }
         }
         return 1;
