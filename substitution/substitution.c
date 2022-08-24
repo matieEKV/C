@@ -14,9 +14,8 @@ int main(int argc, string argv[])
         printf("Usage: ./substitution key\n");
         return 1;
     }
-    else
-    {
-        if (key_check1(argv[1]) == 0 && key_check2(argv[1]) == 0)
+
+    if (key_check1(argv[1]) == 0 && key_check2(argv[1]) == 0)
         {
             printf("wow, good work!\n");
         }
@@ -67,7 +66,6 @@ int key_check2(string s)
             {
                 if (s[i] != s[j])
                 {
-                    counter++;
                 }
                 else
                 {
