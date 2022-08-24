@@ -16,17 +16,25 @@ int main(int argc, string argv[])
     }
     else
     {
-        string s1 = "abcdefghijklmnopqrstuvwxyz";
-    if (strcasecmp(argv[1], s1) == 0)
-        {
-            printf("they are equal!\n");
-        }
-    else
-    {
-        printf("they are not the same\n");
-    }
     }
 }
+
+
+
+
+
+
+        // string s1 = "abcdefghijklmnopqrstuvwxyz";
+    // if (strcasecmp(argv[1], s1) == 0)
+        // {
+            // printf("they are equal!\n");
+        // }
+    // else
+    // {
+        // printf("they are not the same\n");
+    // }
+    // }
+// }
 
 int key_check(string s)
 {
