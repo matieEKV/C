@@ -43,7 +43,7 @@ int key_check1(string s)
             return 1;
         }
     }
-    if (length != 26 && counter == length)
+    if (length != 26)
     {
         printf ("The key must contain 26 alphabetic characters\n");
         return 1;
