@@ -15,7 +15,7 @@ int main(int argc, string argv[])
     }
     else
     {
-        if (key_check1(argv[1]))
+        if (key_check1(argv[1]) == 0)
         {
             printf("so far so good!\n");
         } else {
@@ -52,7 +52,6 @@ int key_check1(string s)
     {
         return 0;
     }
-    printf("returning 1\n");
     return 1;
 }
 //function checks for repeating characters
