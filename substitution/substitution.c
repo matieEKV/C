@@ -54,7 +54,7 @@ bool key_check1(string s)
         else
         {
             printf("The key must be alphabetical\n");
-            return 1;
+            return false;
         }
     }
     if (counter1 != 26)
