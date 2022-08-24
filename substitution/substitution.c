@@ -67,12 +67,12 @@ int key_check2(string s)
             {
                 if (s[i] == s[j])
                 {
+                    printf("key cannot have repeating characters\n");
                     return 1;
                 }
                 else
                 {
-                    printf("key cannot have repeating characters\n");
-                    return 1;
+                    return 0;
                 }
             }
         }
