@@ -16,6 +16,10 @@ int main(int argc, string argv[])
     }
     else
     {
+        if (key_check1(argv[1]))
+        {
+            printf("so far so good!\n");
+        }
     }
 }
 
@@ -53,27 +57,27 @@ bool key_check1(string s)
             return 1;
         }
     }
-    if (counter != 26)
+    if (counter1 != 26)
     {
         printf ("The key must contain 26 alphabetic characters\n");
-        return false
+        return false;
     }
     return false;
 }
 //function checks for repeating characters
-bool key_check2 (string s)
-{
-    int repeating_character = s[i], s[j];
-        for (i = 0; i < strlen(s); i++)
-        {
-            for (j = i + 1; j < strlen(s); j++)
-            {
-                if (s[i] == s[j])
-                {
-                    printf("your input cannot have repeating characters!\n");
-                    return 1;
-                }
-            }
+// bool key_check2 (string s)
+// {
+    // int repeating_character = s[i], s[j];
+        // for (i = 0; i < strlen(s); i++)
+        // {
+            // for (j = i + 1; j < strlen(s); j++)
+            // {
+                // if (s[i] == s[j])
+                // {
+                    // printf("your input cannot have repeating characters!\n");
+                    // return 1;
+                // }
+            // }
 
     // string s1 = "abcdefghijklmnopqrstuvwxyz";
     // if (strcasecmp(s, s1) == 0)
@@ -81,8 +85,8 @@ bool key_check2 (string s)
             // return 0;
             // printf("they are equal!/n");
         // }
-    return false;
-    }
+    // return false;
+    // }
 
 
 // bool final_key_check (int k)
