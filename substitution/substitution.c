@@ -39,7 +39,6 @@ int main(int argc, string argv[])
 int key_check1(string s)
 {
     int counter1 = 0;
-    int counter2 = 0;
     for (int i = 0; i < strlen(s); i++)
     {
         char individual = s[i];
@@ -54,7 +53,7 @@ int key_check1(string s)
             return 1;
         }
     }
-    int repeating_character = i, j;
+    int repeating_character = s[i], s[j];
         for (i = 0; i < strlen(s); i++)
         {
             for (j = i + 1; j < strlen(s); j++)
