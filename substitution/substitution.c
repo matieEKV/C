@@ -32,10 +32,12 @@ int key_check1(string s)
     int length = strlen(s);
     for (int i = 0; i < length; i++)
     {
+        int counter = 0;
         char individual = s[i];
         if (isalpha(individual))
         {
-            printf("returning 0\n");
+            counter++;
+            printf("checked %i times\n", counter);
             return 0;
         }
         else
