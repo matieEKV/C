@@ -26,14 +26,12 @@ int main(int argc, string argv[])
 //function checks whether key is alphabetical and if the key is 26 characters long
 int key_check1(string s)
 {
-    int counter = 0;
     int length = strlen(s);
     for (int i = 0; i < length; i++)
     {
         char individual = s[i];
         if (isalpha(individual))
         {
-            counter++;
             return 0;
         }
         else
@@ -42,7 +40,7 @@ int key_check1(string s)
             return 1;
         }
     }
-    if (counter != 26)
+    if (length != 26)
     {
         printf ("The key must contain 26 alphabetic characters\n");
         return 1;
