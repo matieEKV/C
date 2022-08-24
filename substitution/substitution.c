@@ -36,8 +36,6 @@ int key_check1(string s)
         char individual = s[i];
         if (isalpha(individual))
         {
-            counter++;
-            printf("checked %i times\n", counter);
             return 0;
         }
         else
@@ -45,6 +43,7 @@ int key_check1(string s)
             printf("The key must be alphabetical\n");
             return 1;
         }
+        printf("checked %i times\n", counter);
     }
     if (length != 26)
     {
