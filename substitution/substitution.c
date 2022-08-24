@@ -15,7 +15,7 @@ int main(int argc, string argv[])
     }
     else
     {
-        if (key_check1(argv[1])==0)
+        if (key_check1(argv[1] == 0)
         {
             printf("so far so good!\n");
         } else {
@@ -47,6 +47,10 @@ int key_check1(string s)
     {
         printf ("The key must contain 26 alphabetic characters\n");
         return 1;
+    }
+    else
+    {
+        return 0;
     }
     printf("returning 1\n");
     return 1;
