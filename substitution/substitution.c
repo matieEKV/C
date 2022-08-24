@@ -17,10 +17,7 @@ int main(int argc, string argv[])
 
     if (key_check1(argv[1]) && key_check2(argv[1]))
         {
-            printf("wow, good work!\n");
-        }
-        else {
-            printf("not good\n");
+            
         }
 }
 
@@ -45,9 +42,7 @@ bool key_check1(string s)
         printf ("The key must contain 26 alphabetic characters\n");
         return false;
     }
-    
-    }
-    return false;
+    return true;
 }
 
 //function checks for repeating characters
