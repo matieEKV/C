@@ -43,7 +43,8 @@ int main(int argc, string argv[])
 bool key_check1(string s)
 {
     int counter1 = 0;
-    for (int i = 0; i < strlen(s); i++)
+    int length = strlen(s);
+    for (int i = 0; i < length; i++)
     {
         char individual = s[i];
         if (isalpha(individual))
@@ -57,7 +58,7 @@ bool key_check1(string s)
             return false;
         }
     }
-    if (counter1 != 26)
+    if (counter1 != 26 && counter1 == length)
     {
         printf ("The key must contain 26 alphabetic characters\n");
         return false;
