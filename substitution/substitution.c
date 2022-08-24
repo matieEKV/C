@@ -54,12 +54,24 @@ int key_check1(string s)
             return 1;
         }
     }
-    string s1 = "abcdefghijklmnopqrstuvwxyz";
-    if (strcasecmp(s, s1) == 0)
+    int repeating_character = i, j;
+        for (i = 0; i < strlen(s); i++)
         {
-            return 0;
-            printf("they are equal!/n");
-        }
+            for (j = i + 1; j < strlen(s); j++)
+            {
+                if (s[i] == s[j])
+                {
+                    printf("your input cannot have repeating characters!\n");
+                    return 1;
+                }
+            }
+
+    // string s1 = "abcdefghijklmnopqrstuvwxyz";
+    // if (strcasecmp(s, s1) == 0)
+        // {
+            // return 0;
+            // printf("they are equal!/n");
+        // }
     return 1;
     }
 
