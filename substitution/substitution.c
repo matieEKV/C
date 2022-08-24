@@ -34,11 +34,7 @@ bool key_check1(string s)
     for (int i = 0; i < length; i++)
     {
         char individual = s[i];
-        if (isalpha(individual))
-        {
-            counter++;
-        }
-        else
+        if (!isalpha(individual))
         {
             printf("The key must be alphabetical\n");
             return false;
@@ -49,9 +45,7 @@ bool key_check1(string s)
         printf ("The key must contain 26 alphabetic characters\n");
         return false;
     }
-    else
-    {
-        return true;
+    
     }
     return false;
 }
