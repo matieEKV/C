@@ -5,7 +5,7 @@
 #include <ctype.h>
 
 bool final_key_check (int k);
-int key_check (string s);
+int key_check1 (string s);
 
 int main(int argc, string argv[])
 {
@@ -35,8 +35,8 @@ int main(int argc, string argv[])
     // }
     // }
 // }
-
-int key_check(string s)
+//function checks whether key is alphabetical
+int key_check1(string s)
 {
     int counter1 = 0;
     int counter2 = 0;
