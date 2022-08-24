@@ -5,6 +5,7 @@
 #include <ctype.h>
 
 int key_check1 (string s);
+int key_check2 (string s);
 
 int main(int argc, string argv[])
 {
@@ -15,10 +16,11 @@ int main(int argc, string argv[])
     }
     else
     {
-        if (key_check1(argv[1]) == 0)
+        if (key_check1(argv[1]) == 0 && key_check2(argv[1]) == 0)
         {
-            printf("so far so good!\n");
-        } else {
+            printf("wow, good work!\n");
+        }
+        else {
             printf("not good\n");
         }
     }
@@ -60,13 +62,18 @@ int key_check2(string s)
 {
         for (int i = 0; i < strlen(s); i++)
         {
-            for (j = i + 1; j < strlen(s); j++)
+            for (int j = i + 1; j < strlen(s); j++)
             {
                 if (s[i] == s[j])
                 {
                     printf("key cannot have repeating characters\n");
                     return 1;
                 }
+                else
+                {
+                    return 0;
+                }
             }
         }
+        return 1;
 }
