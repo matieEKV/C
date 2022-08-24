@@ -15,9 +15,12 @@ int main(int argc, string argv[])
     }
     else
     {
+        printf("2 args\n");
         if (key_check1(argv[1]))
         {
             printf("so far so good!\n");
+        } else {
+            printf("not good\n");
         }
     }
 }
@@ -32,6 +35,7 @@ int key_check1(string s)
         char individual = s[i];
         if (isalpha(individual))
         {
+            printf("returning 0\n");
             return 0;
         }
         else
@@ -45,6 +49,7 @@ int key_check1(string s)
         printf ("The key must contain 26 alphabetic characters\n");
         return 1;
     }
+    printf("returning 1\n");
     return 1;
 }
 //function checks for repeating characters
