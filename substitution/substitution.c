@@ -4,8 +4,8 @@
 #include <strings.h>
 #include <ctype.h>
 
-bool key_check1 (string s);
-bool key_check2 (string s);
+bool key_check1(string s);
+bool key_check2(string s);
 
 int main(int argc, string argv[])
 {
