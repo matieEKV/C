@@ -5,7 +5,7 @@
 #include <ctype.h>
 
 bool final_key_check (int k);
-bool key_check1 (string s);
+int key_check1 (string s);
 
 int main(int argc, string argv[])
 {
@@ -40,30 +40,30 @@ int main(int argc, string argv[])
     // }
 // }
 //function checks whether key is alphabetical and if the key is 26 characters long
-bool key_check1(string s)
+int key_check1(string s)
 {
-    int counter1 = 0;
+    int counter = 0;
     int length = strlen(s);
     for (int i = 0; i < length; i++)
     {
         char individual = s[i];
         if (isalpha(individual))
         {
-            counter1++;
+            counter++;
             return 0;
         }
         else
         {
             printf("The key must be alphabetical\n");
-            return false;
+            return 1;
         }
     }
     if (counter1 != 26 && counter1 == length)
     {
         printf ("The key must contain 26 alphabetic characters\n");
-        return false;
+        return 1;
     }
-    return false;
+    return 1;
 }
 //function checks for repeating characters
 // bool key_check2 (string s)
