@@ -62,9 +62,9 @@ int key_check2(string s)
 {
         for (int i = 0; i < strlen(s); i++)
         {
-            printf("printing over here too!\n");
             for (int j = i + 1; j < strlen(s); j++)
             {
+                printf("should i print here too?\n");
                 if (s[i] == s[j])
                 {
                     printf("key cannot have repeating characters\n");
