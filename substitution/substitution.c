@@ -15,7 +15,7 @@ int main(int argc, string argv[])
     }
     else
     {
-        if (key_check1(argv[1] == 0)
+        if (key_check1(argv[1]))
         {
             printf("so far so good!\n");
         } else {
