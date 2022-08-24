@@ -24,21 +24,6 @@ int main(int argc, string argv[])
 }
 
 
-
-
-
-
-        // string s1 = "abcdefghijklmnopqrstuvwxyz";
-    // if (strcasecmp(argv[1], s1) == 0)
-        // {
-            // printf("they are equal!\n");
-        // }
-    // else
-    // {
-        // printf("they are not the same\n");
-    // }
-    // }
-// }
 //function checks whether key is alphabetical and if the key is 26 characters long
 int key_check1(string s)
 {
@@ -58,7 +43,7 @@ int key_check1(string s)
             return 1;
         }
     }
-    if (counter1 != 26 && counter1 == length)
+    if (counter != 26)
     {
         printf ("The key must contain 26 alphabetic characters\n");
         return 1;
@@ -79,18 +64,3 @@ int key_check1(string s)
                     // return 1;
                 // }
             // }
-
-    // string s1 = "abcdefghijklmnopqrstuvwxyz";
-    // if (strcasecmp(s, s1) == 0)
-        // {
-            // return 0;
-            // printf("they are equal!/n");
-        // }
-    // return false;
-    // }
-
-
-// bool final_key_check (int k)
-// {
-
-// }
