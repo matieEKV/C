@@ -59,7 +59,6 @@ int key_check1(string s)
 //function checks for repeating characters
 int key_check2(string s)
 {
-        int counter = 0;
         for (int i = 0; i < strlen(s); i++)
         {
             for (int j = i + 1; j < strlen(s); j++)
@@ -71,5 +70,5 @@ int key_check2(string s)
                 }
             }
         }
-        return 1;
+        return 0;
 }
