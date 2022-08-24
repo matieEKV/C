@@ -17,7 +17,7 @@ int main(int argc, string argv[])
 
     if (key_check1(argv[1]) && key_check2(argv[1]))
         {
-            
+
         }
 }
 
@@ -26,7 +26,6 @@ int main(int argc, string argv[])
 //function checks whether key is alphabetical and if the key is 26 characters long
 bool key_check1(string s)
 {
-    int counter = 0;
     int length = strlen(s);
     for (int i = 0; i < length; i++)
     {
