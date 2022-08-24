@@ -4,7 +4,6 @@
 #include <strings.h>
 #include <ctype.h>
 
-bool final_key_check (int k);
 int key_check1 (string s);
 
 int main(int argc, string argv[])
