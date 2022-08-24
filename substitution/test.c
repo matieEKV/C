@@ -14,6 +14,14 @@ int main(int argc, string argv[])
     }
     else
     {
-        qsort(&argv[1], argc - 1, sizeof(char *));
+        int repeating_character = i, j;
+        for (i = 0; i < strlen(s); i++)
+        {
+            for (j = i + 1; j < strlen(s); j++)
+            {
+                if (s[i] == s[j])
+                {
+                    printf("your input cannot have repeating characters!\n);
+                    return 1;
 
     }
