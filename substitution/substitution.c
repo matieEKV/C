@@ -67,7 +67,7 @@ int key_check2(string s)
             {
                 if (s[i] != s[j])
                 {
-                    return 0;
+                    counter++;
                 }
                 else
                 {
