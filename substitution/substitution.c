@@ -69,20 +69,25 @@ bool key_check2(string s)
 
 int conversion(string s)
 {
-     string s[0] = 65;
-     for (int i = 1; i < strlen(s); i++)
+    int alpha_index = 0;
+    int cypher = 0;
+    if (isalpha(c))
     {
-        char c = s[i];
-        char c++
-        printf("this is something i%\n", c);
-    }
-    return 0;
+        if (islower(c))
+        {
+            alpha_index = c - 'a';
+            cypher = (alpha_index + n) % 26;
+            char cyphered = cypher + 'a';
+            return cyphered;
+        }
+        if (isupper(c))
+        {
+            alpha_index = c - 'A';
+            cypher = (alpha_index + n) % 26;
+            char cyphered = cypher + 'A';
+            //    printf ("check upper %c/n", cyphered);
+            return cyphered;
+        }
+    return c;
+ }
 }
-// this functions encyphers the plaintext using the key
-//char encypher(string s)
-// {
-    // for (int i = 0; i < strlen(s); i++)
-    // {
-        // char c = plaintext[i];
-    // }
-// }
