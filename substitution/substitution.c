@@ -20,6 +20,7 @@ int main(int argc, string argv[])
     if (key_check1(argv[1]) && key_check2(argv[1]))
     {
         string plaintext = get_string("Plaintext: ");
+        char c = argv[1];
     }
 }
 
@@ -65,8 +66,7 @@ bool key_check2(string s)
 
 int conversion(string s)
 {
-    char c = key[i];
-    c[0] = 65;
+     char c[0] = 65;
      for (int i = 1; i < strlen(s); i++)
     {
         char c++
