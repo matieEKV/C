@@ -70,23 +70,17 @@ bool key_check2(string s)
 int conversion(string s)
 {
     int alpha_index = 0;
-    int cypher = 0;
     if (isalpha(c))
     {
         if (islower(c))
         {
             alpha_index = c - 'a';
-            cypher = (alpha_index + n) % 26;
-            char cyphered = cypher + 'a';
-            return cyphered;
+            return alpha_index;
         }
         if (isupper(c))
         {
             alpha_index = c - 'A';
-            cypher = (alpha_index + n) % 26;
-            char cyphered = cypher + 'A';
-            //    printf ("check upper %c/n", cyphered);
-            return cyphered;
+            return alpha_index;
         }
     return c;
  }
