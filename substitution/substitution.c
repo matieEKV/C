@@ -4,8 +4,8 @@
 #include <strings.h>
 #include <ctype.h>
 
-int key_check1(string s);
-int key_check2(string s);
+bool key_check1(string s);
+bool key_check2(string s);
 char conversion(char c, string s);
 char encypher(string s);
 
@@ -17,7 +17,7 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    if (key_check1(argv[1]) == 0 && key_check2(argv[1]) == 0)
+    if (key_check1(argv[1]) && key_check2(argv[1]))
     {
         string plaintext = get_string("Plaintext: ");
         printf("ciphertext: ");
@@ -30,10 +30,14 @@ int main(int argc, string argv[])
             printf ("\n");
             return 0;
     }
+    else
+    {
+        return 1;
+    }
 }
 
 // function checks whether key is alphabetical and if the key is 26 characters long
-int key_check1(string s)
+bool key_check1(string s)
 {
     int length = strlen(s);
     for (int i = 0; i < length; i++)
@@ -42,19 +46,19 @@ int key_check1(string s)
         if (!isalpha(individual))
         {
             printf("The key must be alphabetical\n");
-            return 1;
+            return false;
         }
     }
     if (length != 26)
     {
         printf("The key must contain 26 alphabetic characters\n");
-        return 1;
+        return false;
     }
-    return 0;
+    return true;
 }
 
 // function checks for repeating characters
-int key_check2(string s)
+bool key_check2(string s)
 {
     for (int i = 0; i < strlen(s); i++)
     {
@@ -63,11 +67,11 @@ int key_check2(string s)
             if (s[i] == s[j])
             {
                 printf("key cannot have repeating characters\n");
-                return 1;
+                return false;
             }
         }
     }
-    return 0;
+    return true;
 }
 
 // functions converts ascii values of the key
