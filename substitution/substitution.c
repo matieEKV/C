@@ -62,12 +62,14 @@ bool key_check2(string s)
         return true;
 }
 
+
+//functions converts ascii values of the key
 //this functions encyphers the plaintext using the key
 char encypher(string s)
 {
     for (int i=0; i < strlen(s); i++)
     {
         char c = plaintext[i];
-        
+
     }
 }
