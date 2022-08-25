@@ -77,7 +77,7 @@ char conversion(char c, string s)
         if (islower(c))
         {
             alpha_index = c - 'a';
-            return alpha_index;
+            return s[alpha_index];
         }
         if (isupper(c))
         {
