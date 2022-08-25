@@ -6,6 +6,7 @@
 
 bool key_check1(string s);
 bool key_check2(string s);
+char encypher(string s);
 
 int main(int argc, string argv[])
 {
@@ -59,4 +60,13 @@ bool key_check2(string s)
             }
         }
         return true;
+}
+
+//this functions encyphers the plaintext using the key
+char encypher(string s)
+{
+    for (int i=0; i < strlen(s); i++)
+    {
+        
+    }
 }
