@@ -6,6 +6,7 @@
 
 bool key_check1(string s);
 bool key_check2(string s);
+int conversion(string s);
 char encypher(string s);
 
 int main(int argc, string argv[])
@@ -17,14 +18,12 @@ int main(int argc, string argv[])
     }
 
     if (key_check1(argv[1]) && key_check2(argv[1]))
-        {
-            string plaintext = get_string("Plaintext: ");
-        }
+    {
+        string plaintext = get_string("Plaintext: ");
+    }
 }
 
-
-
-//function checks whether key is alphabetical and if the key is 26 characters long
+// function checks whether key is alphabetical and if the key is 26 characters long
 bool key_check1(string s)
 {
     int length = strlen(s);
@@ -39,37 +38,46 @@ bool key_check1(string s)
     }
     if (length != 26)
     {
-        printf ("The key must contain 26 alphabetic characters\n");
+        printf("The key must contain 26 alphabetic characters\n");
         return false;
     }
     return true;
 }
 
-//function checks for repeating characters
+// function checks for repeating characters
 bool key_check2(string s)
 {
-        for (int i = 0; i < strlen(s); i++)
+    for (int i = 0; i < strlen(s); i++)
+    {
+        for (int j = i + 1; j < strlen(s); j++)
         {
-            for (int j = i + 1; j < strlen(s); j++)
+            if (s[i] == s[j])
             {
-                if (s[i] == s[j])
-                {
-                    printf("key cannot have repeating characters\n");
-                    return false;
-                }
+                printf("key cannot have repeating characters\n");
+                return false;
             }
         }
-        return true;
+    }
+    return true;
 }
 
+// functions converts ascii values of the key
 
-//functions converts ascii values of the key
-//this functions encyphers the plaintext using the key
+int conversion(string s)
+{
+    char c = key[i];
+    c[0] = 65;
+     for (int i = 1; i < strlen(s); i++)
+    {
+        char c++
+        printf("this is something i%\n", c);
+    }
+}
+// this functions encyphers the plaintext using the key
 char encypher(string s)
 {
-    for (int i=0; i < strlen(s); i++)
+    for (int i = 0; i < strlen(s); i++)
     {
         char c = plaintext[i];
-
     }
 }
