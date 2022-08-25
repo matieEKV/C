@@ -26,6 +26,7 @@ int main(int argc, string argv[])
                 char substituted = conversion(c, argv[1]);
                 printf("%c", substituted);
             }
+            printf ("\n");
     }
 }
 
