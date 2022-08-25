@@ -24,9 +24,10 @@ int main(int argc, string argv[])
             {
                 char c = plaintext[i];
                 char substituted = conversion(c, argv[1]);
-                printf("%c", substituted);
+                printf("ciphertext: %c", substituted);
             }
             printf ("\n");
+            return 0;
     }
 }
 
