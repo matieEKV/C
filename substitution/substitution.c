@@ -20,7 +20,7 @@ int main(int argc, string argv[])
     if (key_check1(argv[1]) && key_check2(argv[1]))
     {
         string plaintext = get_string("Plaintext: ");
-        if (int conversion(argv[1])!=0)
+        if (conversion(argv[1])==0)
         {
             printf("how did i manage this?\n");
         }
@@ -76,12 +76,13 @@ int conversion(string s)
         char c++
         printf("this is something i%\n", c);
     }
+    return 0;
 }
 // this functions encyphers the plaintext using the key
-char encypher(string s)
-{
-    for (int i = 0; i < strlen(s); i++)
-    {
-        char c = plaintext[i];
-    }
-}
+//char encypher(string s)
+// {
+    // for (int i = 0; i < strlen(s); i++)
+    // {
+        // char c = plaintext[i];
+    // }
+// }
