@@ -20,11 +20,12 @@ int main(int argc, string argv[])
     if (key_check1(argv[1]) == 0 && key_check2(argv[1]) == 0)
     {
         string plaintext = get_string("Plaintext: ");
+        printf("cyphertext: ");
         for (int i = 0; i < strlen(plaintext); i++)
             {
                 char c = plaintext[i];
                 char substituted = conversion(c, argv[1]);
-                printf("ciphertext: %c", substituted);
+                printf("%c", substituted);
             }
             printf ("\n");
             return 0;
