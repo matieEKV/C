@@ -69,10 +69,10 @@ bool key_check2(string s)
 
 int conversion(string s)
 {
-     char c = s[i];
-     c[0] = 65;
+     string s[0] = 65;
      for (int i = 1; i < strlen(s); i++)
     {
+        char c = s[i];
         char c++
         printf("this is something i%\n", c);
     }
