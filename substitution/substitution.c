@@ -67,6 +67,7 @@ char encypher(string s)
 {
     for (int i=0; i < strlen(s); i++)
     {
+        char c = plaintext[i];
         
     }
 }
