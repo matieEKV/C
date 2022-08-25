@@ -6,7 +6,7 @@
 
 bool key_check1(string s);
 bool key_check2(string s);
-int conversion(string s);
+char conversion(char c);
 char encypher(string s);
 
 int main(int argc, string argv[])
@@ -20,10 +20,12 @@ int main(int argc, string argv[])
     if (key_check1(argv[1]) && key_check2(argv[1]))
     {
         string plaintext = get_string("Plaintext: ");
-        if (conversion(argv[1])==0)
-        {
-            printf("how did i manage this?\n");
-        }
+        for (int i = 0; i < strlen(plaintext); i++)
+            {
+                char c = plaintext[i];
+                char substituted = conversion(c);
+                printf("%c", substituted);
+            }
     }
 }
 
@@ -67,7 +69,7 @@ bool key_check2(string s)
 
 // functions converts ascii values of the key
 
-int conversion(string s)
+char conversion(char c)
 {
     int alpha_index = 0;
     if (isalpha(c))
@@ -84,4 +86,5 @@ int conversion(string s)
         }
     return c;
  }
+ return c;
 }
