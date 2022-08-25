@@ -20,7 +20,10 @@ int main(int argc, string argv[])
     if (key_check1(argv[1]) && key_check2(argv[1]))
     {
         string plaintext = get_string("Plaintext: ");
-        int conversion(argv[1]);
+        if (int conversion(argv[1])!=0)
+        {
+            printf("how did i manage this?\n");
+        }
     }
 }
 
