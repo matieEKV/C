@@ -77,12 +77,14 @@ char conversion(char c, string s)
         if (islower(c))
         {
             alpha_index = c - 'a';
-            return s[alpha_index];
+            char cyphered = s[alpha_index];
+            return cyphered;
         }
         if (isupper(c))
         {
             alpha_index = c - 'A';
-            return alpha_index;
+            char cyphered = s[alpha_index];
+            return cyphered;
         }
     return c;
  }
