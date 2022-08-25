@@ -20,7 +20,7 @@ int main(int argc, string argv[])
     if (key_check1(argv[1]) == 0 && key_check2(argv[1]) == 0)
     {
         string plaintext = get_string("Plaintext: ");
-        printf("cyphertext: ");
+        printf("ciphertext: ");
         for (int i = 0; i < strlen(plaintext); i++)
             {
                 char c = plaintext[i];
