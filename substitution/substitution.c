@@ -6,7 +6,7 @@
 
 bool key_check1(string s);
 bool key_check2(string s);
-char conversion(char c);
+char conversion(char c, string s);
 char encypher(string s);
 
 int main(int argc, string argv[])
@@ -23,7 +23,7 @@ int main(int argc, string argv[])
         for (int i = 0; i < strlen(plaintext); i++)
             {
                 char c = plaintext[i];
-                char substituted = conversion(c);
+                char substituted = conversion(c, argv[1]);
                 printf("%c", substituted);
             }
     }
@@ -69,7 +69,7 @@ bool key_check2(string s)
 
 // functions converts ascii values of the key
 
-char conversion(char c)
+char conversion(char c, string s)
 {
     int alpha_index = 0;
     if (isalpha(c))
