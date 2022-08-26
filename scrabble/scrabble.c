@@ -47,7 +47,6 @@ int compute_score(string word)
         }
 
     }
-    printf("score %i\n", score);
     return score;
 
 }
