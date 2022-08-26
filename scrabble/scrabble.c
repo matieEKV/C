@@ -43,7 +43,7 @@ int compute_score(string word)
         alpha_index = c - 'a';
         score += POINTS[alpha_index];
     }
-    printf("score %i\n"; score);
+    printf("score %i\n", score);
     return score;
 
 }
