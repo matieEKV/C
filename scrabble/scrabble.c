@@ -41,10 +41,8 @@ int compute_score(string word)
     {
         char c = word[i];
         alpha_index = c - 'a';
-        score +=
-
-
-
+        score += POINTS[alpha_index];
     }
+    return score;
 
 }
