@@ -37,14 +37,15 @@ int compute_score(string word)
 {
     int alpha_index = 0;
     int score = 0;
-    if ((isalpha(word)))
+    for (int i = 0; i < strlen(word); i++)
     {
-        for (int i = 0; i < strlen(word); i++)
+        char c = tolower(word[i]);
+        alpha_index = c - 'a';
+        if ((isalpha(c)))
         {
-            char c = tolower(word[i]);
-            alpha_index = c - 'a';
             score += POINTS[alpha_index];
         }
+
     }
     printf("score %i\n", score);
     return score;
