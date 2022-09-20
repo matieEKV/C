@@ -1,7 +1,7 @@
 sort1 uses: bubble sort
 
-How do you know?: The determining factor was running time for the sorted list - it was faster than others. Since bubble sort has
-omega(n), it should go quick through the already sorted list.
+How do you know?: The determining factor was running time for the sorted list - it was significantly faster compared to other lists.
+Since bubble sort has omega(n), it should go quick through the already sorted list, at least much faster than through random, which it did.
 
 	SORT 1     seconds
 
@@ -42,7 +42,7 @@ Sorted 50000	2.317
 sort3 uses: selection sort
 
 How do you know?: Although this sorter was faster than the first one, its running time for the sorted list was comparable
-to other lists, meaning that its omega is the same as the big O. 
+to other lists, meaning that its omega is the same as the big O.
 
 	SORT 3     seconds
 
