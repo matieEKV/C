@@ -1,4 +1,4 @@
-sort1 uses: selection sort
+sort1 uses: bubble sort
 
 How do you know?: Compared to other two sorters, it took the longest time to sort through all the lists.
 Also, the time it took to go through the sorted list did not differ much from the other lists, leading me to conclude
@@ -39,7 +39,7 @@ Sorted 10000	0.094
 Sorted 50000	2.317
 
 
-sort3 uses: bubble sort
+sort3 uses: selection sort
 
 How do you know?: This sorter was faster than the first but slower than second, leading me to believe it is using the bubble sort.
 However, the determining factor was running time for the sorted list - it was shorter than others. Since bubble sort has
