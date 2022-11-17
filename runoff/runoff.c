@@ -133,6 +133,10 @@ bool vote(int voter, int rank, string name)
         if (strcmp(candidates[i].name, name) == 0)
         {
             preferences[voter][rank] = i;
+
+            int[] ballot = preferences[voter];
+            ballot[rank] = i;
+
             return true;
         }
     }
