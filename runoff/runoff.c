@@ -134,7 +134,6 @@ bool vote(int voter, int rank, string name)
         {
             //preferences [i][j]
         }
-        printf("doing well so far");
         return true;
     }
     return false;
