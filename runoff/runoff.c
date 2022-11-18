@@ -169,7 +169,15 @@ void tabulate(void)
 // Print the winner of the election, if there is one
 bool print_winner(void)
 {
-    majority_vote = voter_count/2;
+    int half_vote = voter_count/2;
+    //for (i = 0; i < candidate.count; i++)
+    //{
+        int is_majority = candidate.votes/half_vote;
+        if (is_majority > half_vote)
+        {
+            return true;
+        }
+    //}
     return false;
 }
 
