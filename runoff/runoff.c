@@ -150,7 +150,7 @@ void tabulate(void)
             if (!candidates[candidate_index].eliminated)
                 {
                     candidates[candidate_index].votes++;
-                    //printf ("%s %i\n", candidates[i].name, candidates[candidate_index].votes);
+                    printf ("%s %i\n", candidates[i].name, candidates[candidate_index].votes);
                     break;
             }
 
@@ -192,6 +192,7 @@ int find_min(void)
             if (candidates[i].votes < min)
             {
                 min = candidates[i].votes;
+                printf("minimum number of votes is: %i\n", min);
                 return min;
             }
         }
