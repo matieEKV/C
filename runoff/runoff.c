@@ -158,8 +158,6 @@ void tabulate(void)
         // }
 
     }
-    printf ("%s %i\n", candidates[candidate_index].name, candidates[candidate_index].votes);
-
     return;
 }
 
