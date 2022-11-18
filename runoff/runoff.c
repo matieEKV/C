@@ -148,17 +148,16 @@ void tabulate(void)
         {
             int candidate_index = preferences[i][j];
             if (!candidates[candidate_index].eliminated)
-                {
-                    candidates[candidate_index].votes++;
-                    printf ("%s %i\n", candidates[i].name, candidates[candidate_index].votes);
-                    break;
+            {
+                candidates[candidate_index].votes++;
+                printf ("%s %i\n", candidates[i].name, candidates[candidate_index].votes);
+                break;
             }
-
             else
             {
                 int candidate_eliminated = preferences[i][j+1];
                 candidates[candidate_index].votes++;
-        }
+            }
         }
     }
 
