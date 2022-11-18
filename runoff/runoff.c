@@ -158,7 +158,6 @@ void tabulate(void)
             {
                 int candidate_eliminated = preferences[i][j+1];
                 candidates[candidate_index].votes++;
-                break;
         }
         }
     }
