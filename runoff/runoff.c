@@ -128,7 +128,7 @@ int main(int argc, string argv[])
 // Record preference if vote is valid
 bool vote(int voter, int rank, string name)
 {
-    for (int i=0; i < candidate_count; i++)
+    for (int i = 0; i < candidate_count; i++)
     {
         if (strcmp(candidates[i].name, name) == 0)
         {
@@ -150,7 +150,6 @@ void tabulate(void)
             if (!candidates[candidate_index].eliminated)
             {
                 candidates[candidate_index].votes++;
-                printf ("%s %i\n", candidates[i].name, candidates[candidate_index].votes);
                 break;
             }
         }
@@ -162,12 +161,12 @@ void tabulate(void)
 // Print the winner of the election, if there is one
 bool print_winner(void)
 {
-    int half_vote = voter_count/2;
+    int half_vote = voter_count / 2;
     for (int i = 0; i < candidate_count; i++)
     {
         if (candidates[i].votes > half_vote)
         {
-            printf ("%s\n", candidates[i].name);
+            printf("%s\n", candidates[i].name);
             return true;
         }
     }
