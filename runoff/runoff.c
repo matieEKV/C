@@ -156,7 +156,7 @@ void tabulate(void)
             else
             {
                 int candidate_eliminated = preferences[i][j+1];
-                candidates[candidate_index].votes++;
+                candidates[candidate_eliminated].votes++;
             }
         }
     }
