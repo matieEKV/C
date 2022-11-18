@@ -151,7 +151,6 @@ void tabulate(void)
             {
                 candidates[candidate_index].votes++;
                 printf ("%s %i\n", candidates[i].name, candidates[candidate_index].votes);
-                return;
                 break;
            }
 
