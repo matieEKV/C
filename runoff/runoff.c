@@ -171,8 +171,8 @@ bool print_winner(void)
     int half_vote = voter_count/2;
     for (int i = 0; i < candidate_count; i++)
     {
-        int is_majority = candidates[i].votes/half_vote;
-        if (is_majority > half_vote)
+        //int is_majority = candidates[i].votes/half_vote;
+        if (candidates[i].votes > half_vote)
         {
             printf ("%s\n", candidates[i].name);
             return true;
