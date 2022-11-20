@@ -194,7 +194,9 @@ void sort_pairs(void)
     pair sorted_pairs[MAX];
     for (int i = 0; i < MAX; i++) {
         for (int j = 0; j < MAX; j++) {
-            if (!(grouped_pairs[i][j].winner == 0 && grouped_pairs[i][j].loser == 0)) {
+            int winner = grouped_pairs[i][j].winner;
+            int loser = grouped_pairs[i][j].loser;
+            if (!((winner == 0 && loser == 0) || winner < 0 || loser < 0 || winner > candidate_count || loser > candidate_count)) {
                 sorted_pairs[sorted_pair_count] = grouped_pairs[i][j];
                 sorted_pair_count++;
             }
