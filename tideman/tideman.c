@@ -109,13 +109,13 @@ bool vote(int rank, string name, int ranks[])
             return true;
         }
     }
-    printf("\nRank: %d %d %d", ranks[0], ranks[1], ranks[2]);
     return false;
 }
 
 // Update preferences given one voter's ranks
 void record_preferences(int ranks[])
 {
+    printf("\nRank: %d %d %d", ranks[0], ranks[1], ranks[2]);
     int prefs_length = sizeof(preferences) / sizeof(preferences[0]);
     for (int i = 0; i < prefs_length; i++) {
         int vote = preferences[i][0];
