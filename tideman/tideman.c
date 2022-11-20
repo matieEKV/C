@@ -231,6 +231,9 @@ void lock_pairs(void)
 bool find_path(int from, int to) {
     printf("\nGoing to find path from %d to %d", from, to);
     // check whether there will be a cycle from:via
+    if (from == to) {
+        return false;
+    }
     if (locked[from][to]) {
         printf("\nFound lock from %d to %d", from, to);
         return true;
