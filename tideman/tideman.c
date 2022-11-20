@@ -103,12 +103,13 @@ int main(int argc, string argv[])
 bool vote(int rank, string name, int ranks[])
 {
     for (int i = 0; i < candidate_count; i++) {
-        string candName = candidates[i];
-        if (strcmp(candName, name)) {
+        string cand_name = candidates[i];
+        if (strcmp(cand_name, name)) {
             ranks[rank] = i;
             return true;
         }
     }
+    printf("\nRank: %d %d %d", ranks[0], ranks[1], ranks[2]);
     return false;
 }
 
