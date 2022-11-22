@@ -42,8 +42,8 @@ int main(int argc, char *argv[])
     int16_t buffer;
     for (int i = 0; i < buffer; i++)
     {
-        fread(&buffer, sizeof(int16_t), 44, input);
-        fwrite(&header, sizeof(uint8_t), 44, output);
+        fread(&buffer, sizeof(int16_t), 1, input);
+        fwrite(&header, sizeof(uint8_t), 1, output);
     }
 
     // Close files
