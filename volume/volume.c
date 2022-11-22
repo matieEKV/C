@@ -43,6 +43,7 @@ int main(int argc, char *argv[])
     for (int i = 0; i < buffer; i++)
     {
         fread(&buffer, sizeof(int16_t), 1, input);
+        buffer =* factor;
         fwrite(&header, sizeof(uint8_t), 1, output);
     }
 
