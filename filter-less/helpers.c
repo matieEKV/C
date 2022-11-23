@@ -30,6 +30,10 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
             int sepiaRed = (image[i][j].rgbtBlue * 0.189) + (image[i][j].rgbtGreen * 0.769) + (image[i][j].rgbtRed * 0.393);
             //printf ("%i\n", sepiaBlue);
 
+            image[i][j].rgbtBlue = sepiaBlue;
+            image[i][j].rgbtGreen = sepiaGreen;
+            image[i][j].rgbtRed = sepiaRed;
+
             if (sepiaBlue > 255)
             {
                 image[i][j].rgbtBlue = 255;
@@ -49,9 +53,7 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
             // printf("Blue: %i\n", sepiaBlue);
             // printf("Green: %i\n", sepiaGreen);
             // printf("Red: %i\n", sepiaRed);
-            image[i][j].rgbtBlue = sepiaBlue;
-            image[i][j].rgbtGreen = sepiaGreen;
-            image[i][j].rgbtRed = sepiaRed;
+
         }
     }
     return;
