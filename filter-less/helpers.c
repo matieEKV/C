@@ -37,23 +37,15 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
             if (sepiaBlue > 255)
             {
                 image[i][j].rgbtBlue = 255;
-                    //printf("Excess Blue :%i\n", excessBlue);
             }
             if (sepiaGreen > 255)
             {
                 image[i][j].rgbtGreen = 255;
-                // printf("Excess Green: %i\n", excessGreen);
             }
             if (sepiaRed > 255)
             {
                 image[i][j].rgbtRed = 255;
-                // printf("Excess Red: %i\n", excessRed);
             }
-
-            // printf("Blue: %i\n", sepiaBlue);
-            // printf("Green: %i\n", sepiaGreen);
-            // printf("Red: %i\n", sepiaRed);
-
         }
     }
     return;
