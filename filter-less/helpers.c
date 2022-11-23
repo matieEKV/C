@@ -1,5 +1,4 @@
 #include "helpers.h"
-#include <math.h>
 #include <stdio.h>
 
 // Convert image to grayscale
@@ -33,27 +32,20 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
 
             if (sepiaBlue + sepiaGreen + sepiaRed - 765 > 0)
             {
-                if (sepiaBlue - 255 > 0)
+                if (sepiaBlue > 255)
                 {
-                    int excessBlue = sepiaBlue - 255;
-                    image[i][j].rgbtBlue = sepiaBlue - excessBlue;
+                    image[i][j].rgbtBlue = 255;
                     //printf("Excess Blue :%i\n", excessBlue);
-                    x = y - 255;
-                    y - (y - 25)
-                    y - y + 255
-                    255
 
                 }
-                if (sepiaGreen - 255 > 0)
+                if (sepiaGreen > 255)
                 {
-                    int excessGreen = sepiaGreen - 255;
-                    image[i][j].rgbtGreen = sepiaGreen - excessGreen;
+                    image[i][j].rgbtGreen = 255;
                     // printf("Excess Green: %i\n", excessGreen);
                 }
-                if (sepiaRed - 255 > 0)
+                if (sepiaRed > 255)
                 {
-                    int excessRed = sepiaRed - 255;
-                    image[i][j].rgbtRed = sepiaRed - excessRed;
+                    image[i][j].rgbtRed = 255;
                     // printf("Excess Red: %i\n", excessRed);
                 }
 
