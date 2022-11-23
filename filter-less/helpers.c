@@ -4,15 +4,15 @@
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
 {
     int gscale_average = 0;
-    for (int i = 0; i < image.width; i++)
+    for (int i = 0; i < width; i++)
     {
-        for (int j = 0; j < image.height; j++)
+        for (int j = 0; j < height; j++)
         {
-            gscale_average = (image.rgbtBlue + image.rgbtGreen + image.rgbtRed) / 3.0;
+            gscale_average = (image[i][j].rgbtBlue + image[i][j].rgbtGreen + image[i][j].rgbtRed) / 3.0;
         }
-            image.rgbtBlue = gscale_average;
-            image.rgbtGreen = gscale_average;
-            image.rgbtRed = gscale_average;
+            image[i][j].rgbtBlue = gscale_average;
+            image[i][j].rgbtGreen = gscale_average;
+            image[i][j].rgbtRed = gscale_average;
     }
     return;
 }
