@@ -21,14 +21,26 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
 // Convert image to sepia
 void sepia(int height, int width, RGBTRIPLE image[height][width])
 {
-    for (int i = 0; i < height; i++)
+    int excess = 0;
+    for(int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
         {
-            int sepiaBlue = (image[i][j].rgbtBlue + image[i][j].rgbtGreen + image[i][j].rgbtRed)
-            int sepiaGreen = (image[i][j].rgbtBlue + image[i][j].rgbtGreen + image[i][j].rgbtRed)
-            int sepiaRed = (image[i][j].rgbtBlue + image[i][j].rgbtGreen + image[i][j].rgbtRed)
-            gscale_average = (image[i][j].rgbtBlue + image[i][j].rgbtGreen + image[i][j].rgbtRed) / 3.0;
+            int sepiaBlue = (image[i][j].rgbtBlue * 0.131) + (image[i][j].rgbtGreen * 0.534) + (image[i][j].rgbtRed * 0.272);
+            int sepiaGreen = (image[i][j].rgbtBlue * 0.168) + (image[i][j].rgbtGreen * 0.686) + (image[i][j].rgbtRed * 0.349);
+            int sepiaRed = (image[i][j].rgbtBlue * 0.189) + (image[i][j].rgbtGreen * 0.769) + (image[i][j].rgbtRed * 0.393);
+
+            if (sepiaBlue + sepiaGreen + sepiaRed - 765 > 0)
+            {
+                int excessBlue = sepiaBlue - 255;
+                int excessGreen = sepiaGreen - 255;
+                int excessRed = sepiaRed - 255;
+
+                image[i][j].rgbtBlue = round(sepiaBlue - excessBlue);
+                image[i][j].rgbtGreen = round(sepiaGreen - excessGreen);
+                image[i][j].rgbtRed = round(sepiaRed - excessRed);
+
+            }
             image[i][j].rgbtBlue = round(sepiaBlue);
             image[i][j].rgbtGreen = round(sepiaGreen);
             image[i][j].rgbtRed = round(sepiaRed);
