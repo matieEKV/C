@@ -30,7 +30,7 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
             int sepiaGreen = round((image[i][j].rgbtBlue * 0.168) + (image[i][j].rgbtGreen * 0.686) + (image[i][j].rgbtRed * 0.349));
             int sepiaRed = round((image[i][j].rgbtBlue * 0.189) + (image[i][j].rgbtGreen * 0.769) + (image[i][j].rgbtRed * 0.393));
 
-            if (sepiaBlue + sepiaGreen + sepiaRed - 765  0)
+            if (sepiaBlue + sepiaGreen + sepiaRed - 765 > 0)
             {
                 int excessBlue = sepiaBlue - 255;
                 int excessGreen = sepiaGreen - 255;
