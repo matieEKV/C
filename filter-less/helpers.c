@@ -140,13 +140,13 @@ int blur_Bluecalculations(int height, int width, RGBTRIPLE copy[height][width], 
             rgbtRed += copy[i][j].rgbtRed;
 
             counter++;
-
-            averageBlue = round(rgbtBlue / counter);
-            averageGreen = round(rgbtGreen / counter);
-            averageRede = round(rgbtRed / counter);
         }
     }
 
+    averageBlue = round(rgbtBlue / counter);
+    averageGreen = round(rgbtGreen / counter);
+    averageRed = round(rgbtRed / counter);
+    
     typedef struct
     {
         int averageBlue;
