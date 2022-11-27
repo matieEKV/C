@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <math.h>
 
-struct averageRGB 
+struct averageRGB
 int blur_Bluecalculations(int height, int width, RGBTRIPLE image[height][width]);
 
 
@@ -146,6 +146,14 @@ int blur_Bluecalculations(int height, int width, RGBTRIPLE copy[height][width], 
             averageRede = round(rgbtRed / counter);
         }
     }
+
+    typedef struct
+    {
+        int averageBlue;
+        int averageGreen;
+        int averageRed;
+    }
+    averageRGB;
     return averageBlue;
 }
 
