@@ -103,13 +103,17 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 
 int blur_Bluecalculations(int height, int width, RGBTRIPLE copy[height][width], int x, int y)
 {
-    int rgbtBlue = 0;
+    int rgbtBlue;
+    int rgbtGreen;
+    int rgbtRed;
     int startY = y;
     int endY = y;
     int startX = x;
     int endX = x;
     int counter = 0;
     int averageBlue;
+    int averageGreen;
+    int averageRed;
     if (y!=0)
     {
         startY = y-1;
@@ -132,9 +136,14 @@ int blur_Bluecalculations(int height, int width, RGBTRIPLE copy[height][width], 
         for (int j = startX; j < endX; j++)
         {
             rgbtBlue += copy[i][j].rgbtBlue;
+            rgbtGreen += copy[i][j].rgbtGreen;
+            rgbtRed += copy[i][j].rgbtRed;
+
             counter++;
 
-            averageBlue = round((row_aboveBlue + row_aroundBlue + row_belowBlue) / counter);
+            averageBlue = round(rgbtBlue / counter);
+            averageGreen = round(rgbtGreen / counter);
+            averageRede = round(rgbtRed / counter);
         }
     }
     return averageBlue;
