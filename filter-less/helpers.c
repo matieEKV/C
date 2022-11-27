@@ -99,36 +99,39 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 
 int blur_Bluecalculations(int height, int width, RGBTRIPLE image[height][width])
 {
+    RGBTRIPLE copy[height][width];
     for(int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
         {
-            int row_aboveBlue = (image[i-1][j-1].rgbtBlue + image[i-1][j].rgbtBlue + image[i-1][j+1].rgbtBlue);
-            int row_aroundBlue = (image[i-1][j-1].rgbtBlue + image[i][j].rgbtBlue + image[i][j+1].rgbtBlue);
-            int row_belowBlue = (image[i-1][j-1].rgbtBlue + image[i+1][j].rgbtBlue + image[i+1][j+1].rgbtBlue);
+            int row_aboveBlue = (copy[i-1][j-1].rgbtBlue + copy[i-1][j].rgbtBlue + copy[i-1][j+1].rgbtBlue);
+            int row_aroundBlue = (copy[i-1][j-1].rgbtBlue + copy[i][j].rgbtBlue + copy[i][j+1].rgbtBlue);
+            int row_belowBlue = (copy[i-1][j-1].rgbtBlue + copy[i+1][j].rgbtBlue + copy[i+1][j+1].rgbtBlue);
             int AverageBlue = round((row_aboveBlue + row_aroundBlue + row_belowBlue) / 3.0);
 }
 
 int blur_Greencalculations(int height, int width, RGBTRIPLE image[height][width])
 {
+    RGBTRIPLE copy[height][width];
     for(int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
         {
-            int row_aboveGreen = (image[i-1][j-1].rgbtGreen + image[i-1][j].rgbtGreen + image[i-1][j+1].rgbtGreen);
-            int row_aroundGreen = (image[i-1][j-1].rgbtGreen + image[i][j].rgbtGreen + image[i][j+1].rgbtGreen);
-            int row_belowGreen = (image[i-1][j-1].rgbtGreen + image[i+1][j].rgbtGreen + image[i+1][j+1].rgbtGreen);
+            int row_aboveGreen = (copy[i-1][j-1].rgbtGreen + copy[i-1][j].rgbtGreen + copy[i-1][j+1].rgbtGreen);
+            int row_aroundGreen = (copy[i-1][j-1].rgbtGreen + copy[i][j].rgbtGreen + copy[i][j+1].rgbtGreen);
+            int row_belowGreen = (copy[i-1][j-1].rgbtGreen + copy[i+1][j].rgbtGreen + copy[i+1][j+1].rgbtGreen);
             int AverageGreen = round((row_aboveGreen + row_aroundGreen + row_belowGreen) / 3.0);
 }
 
 int blur_Redcalculations(int height, int width, RGBTRIPLE image[height][width])
 {
+    RGBTRIPLE copy[height][width];
     for(int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
         {
-            int row_aboveRed = (image[i-1][j-1].rgbtRed + image[i-1][j].rgbtRed + image[i-1][j+1].rgbtRed);
-            int row_aroundRed = (image[i-1][j-1].rgbtRed + image[i][j].rgbtRed + image[i][j+1].rgbtRed);
-            int row_belowRed = (image[i-1][j-1].rgbtRed + image[i+1][j].rgbtRed + image[i+1][j+1].rgbtRed);
+            int row_aboveRed = (copy[i-1][j-1].rgbtRed + copy[i-1][j].rgbtRed + copy[i-1][j+1].rgbtRed);
+            int row_aroundRed = (copy[i-1][j-1].rgbtRed + copy[i][j].rgbtRed + copy[i][j+1].rgbtRed);
+            int row_belowRed = (copy[i-1][j-1].rgbtRed + copy[i+1][j].rgbtRed + copy[i+1][j+1].rgbtRed);
             int AverageRed = round((row_aboveRed + row_aroundRed + row_belowRed) / 3.0);
 }
