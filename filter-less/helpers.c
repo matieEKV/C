@@ -80,14 +80,14 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
-    // RGBTRIPLE copy[height][width];
-    // for(int i = 0; i < height; i++)
-    // {
-    //     for (int j = 0; j < width; j++)
-    //     {
-    //         copy[height][width] = image[height][width];
-    //     }
-    // }
+    RGBTRIPLE copy[height][width];
+    for(int i = 0; i < height; i++)
+    {
+        for (int j = 0; j < width; j++)
+        {
+            copy[height][width] = image[height][width];
+        }
+    }
 
     for(int i = 0; i < height; i++)
         {
@@ -101,17 +101,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     return;
 }
 
-int blur_Bluecalculations(int height, int width, RGBTRIPLE image[height][width])
+int blur_Bluecalculations(int height, int width, RGBTRIPLE copy[height][width])
 {
     int averageBlue;
-    RGBTRIPLE copy[height][width];
-    for(int i = 0; i < height; i++)
-    {
-        for (int j = 0; j < width; j++)
-        {
-            copy[height][width] = image[height][width];
-        }
-    }
     for(int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
@@ -125,17 +117,9 @@ int blur_Bluecalculations(int height, int width, RGBTRIPLE image[height][width])
     return averageBlue;
 }
 
-int blur_Greencalculations(int height, int width, RGBTRIPLE image[height][width])
+int blur_Greencalculations(int height, int width, RGBTRIPLE copy[height][width])
 {
     int averageGreen;
-    RGBTRIPLE copy[height][width];
-    for(int i = 0; i < height; i++)
-    {
-        for (int j = 0; j < width; j++)
-        {
-            copy[height][width] = image[height][width];
-        }
-    }
     for(int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
@@ -149,17 +133,9 @@ int blur_Greencalculations(int height, int width, RGBTRIPLE image[height][width]
     return averageGreen;
 }
 
-int blur_Redcalculations(int height, int width, RGBTRIPLE image[height][width])
+int blur_Redcalculations(int height, int width, RGBTRIPLE copy[height][width])
 {
     int averageRed;
-    RGBTRIPLE copy[height][width];
-    for(int i = 0; i < height; i++)
-    {
-        for (int j = 0; j < width; j++)
-        {
-            copy[height][width] = image[height][width];
-        }
-    }
     for(int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
