@@ -100,9 +100,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 
 RGBTRIPLE blurredPixel(int height, int width, RGBTRIPLE copy[height][width], int x, int y)
 {
-    int rgbtBlue;
-    int rgbtGreen;
-    int rgbtRed;
+    int rgbtBlue = 0;
+    int rgbtGreen = 0;
+    int rgbtRed = 0;
     int startY = y;
     int endY = y;
     int startX = x;
@@ -144,7 +144,7 @@ RGBTRIPLE blurredPixel(int height, int width, RGBTRIPLE copy[height][width], int
     averageGreen = round(rgbtGreen / counter);
     averageRed = round(rgbtRed / counter);
 
-    struct RGBTRIPLE newValues;
+    RGBTRIPLE newValues;
     newValues.rgbtBlue = averageBlue;
     newValues.rgbtGreen = averageGreen;
     newValues.rgbtRed = averageRed;
