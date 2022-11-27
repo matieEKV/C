@@ -2,9 +2,9 @@
 #include <stdio.h>
 #include <math.h>
 
+struct averageRGB 
 int blur_Bluecalculations(int height, int width, RGBTRIPLE image[height][width]);
-int blur_Greencalculations(int height, int width, RGBTRIPLE image[height][width]);
-int blur_Redcalculations(int height, int width, RGBTRIPLE image[height][width]);
+
 
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
