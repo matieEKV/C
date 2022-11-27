@@ -112,8 +112,20 @@ int blur_Bluecalculations(int height, int width, RGBTRIPLE copy[height][width], 
     {
         startY = y-1;
     }
-    if ()
-    for(int i = 0; i < height; i++)
+    if (y < height-1)
+    {
+        endY = y+1;
+    }
+    if (x!=0)
+    {
+        startX = x-1;
+    }
+    if (x < width-1)
+    {
+        endX = x+1;
+    }
+
+    for(int i = y; i < height; i++)
     {
         for (int j = 0; j < width; j++)
         {
