@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <math.h>
 
-struct RGBTRIPLE(int height, int width, RGBTRIPLE image[height][width], int x, int y);
+RGBTRIPLE blurredPixel(int height, int width, RGBTRIPLE image[height][width], int x, int y);
 
 
 // Convert image to grayscale
@@ -98,7 +98,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     return;
 }
 
-RGBTRIPLE newValues(int height, int width, RGBTRIPLE copy[height][width], int x, int y)
+RGBTRIPLE blurredPixel(int height, int width, RGBTRIPLE copy[height][width], int x, int y)
 {
     int rgbtBlue;
     int rgbtGreen;
