@@ -104,6 +104,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 int blur_Bluecalculations(int height, int width, RGBTRIPLE copy[height][width])
 {
     int averageBlue;
+    if 
     for(int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
