@@ -103,8 +103,8 @@ int blur_Bluecalculations(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-    int row_aboveBlue = (image[i-1][j-1].rgbtBlue + image[i-1][j].rgbtBlue + image[i-1][j+1].rgbtBlue);
-    int row_aroundBlue = (image[i-1][j-1].rgbtBlue + image[i][j].rgbtBlue + image[i][j+1].rgbtBlue);
-    int row_belowBlue = (image[i-1][j-1].rgbtBlue + image[i+1][j].rgbtBlue + image[i+1][j+1].rgbtBlue);
-    int AverageBlue = round((row_aboveBlue + row_aroundBlue + row_belowBlue) / 3.0);
+            int row_aboveBlue = (image[i-1][j-1].rgbtBlue + image[i-1][j].rgbtBlue + image[i-1][j+1].rgbtBlue);
+            int row_aroundBlue = (image[i-1][j-1].rgbtBlue + image[i][j].rgbtBlue + image[i][j+1].rgbtBlue);
+            int row_belowBlue = (image[i-1][j-1].rgbtBlue + image[i+1][j].rgbtBlue + image[i+1][j+1].rgbtBlue);
+            int AverageBlue = round((row_aboveBlue + row_aroundBlue + row_belowBlue) / 3.0);
 }
