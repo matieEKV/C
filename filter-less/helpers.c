@@ -98,7 +98,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     return;
 }
 
-struct RGBTRIPLE(int height, int width, RGBTRIPLE copy[height][width], int x, int y)
+RGBTRIPLE newValues(int height, int width, RGBTRIPLE copy[height][width], int x, int y)
 {
     int rgbtBlue;
     int rgbtGreen;
