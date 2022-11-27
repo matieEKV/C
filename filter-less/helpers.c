@@ -149,7 +149,7 @@ int blur_Greencalculations(int height, int width, RGBTRIPLE image[height][width]
     return averageGreen;
 }
 
-int blur_Redcalculations(int height, int width, RGBTRIPLE image[height][width])
+int blur_Redcalculations(int height, int width, RGBTRIPLE copy[height][width], )
 {
     int averageRed;
     RGBTRIPLE copy[height][width];
