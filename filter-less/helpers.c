@@ -119,7 +119,7 @@ int blur_Bluecalculations(int height, int width, RGBTRIPLE image[height][width])
             int row_aboveBlue = (copy[i-1][j-1].rgbtBlue + copy[i-1][j].rgbtBlue + copy[i-1][j+1].rgbtBlue);
             int row_aroundBlue = (copy[i-1][j-1].rgbtBlue + copy[i][j].rgbtBlue + copy[i][j+1].rgbtBlue);
             int row_belowBlue = (copy[i-1][j-1].rgbtBlue + copy[i+1][j].rgbtBlue + copy[i+1][j+1].rgbtBlue);
-            averageBlue = round((row_aboveBlue + row_aroundBlue + row_belowBlue) / 3.0);
+            averageBlue = round((row_aboveBlue + row_aroundBlue + row_belowBlue) / 9.0);
         }
     }
     return averageBlue;
@@ -143,7 +143,7 @@ int blur_Greencalculations(int height, int width, RGBTRIPLE image[height][width]
             int row_aboveGreen = (copy[i-1][j-1].rgbtGreen + copy[i-1][j].rgbtGreen + copy[i-1][j+1].rgbtGreen);
             int row_aroundGreen = (copy[i-1][j-1].rgbtGreen + copy[i][j].rgbtGreen + copy[i][j+1].rgbtGreen);
             int row_belowGreen = (copy[i-1][j-1].rgbtGreen + copy[i+1][j].rgbtGreen + copy[i+1][j+1].rgbtGreen);
-            averageGreen = round((row_aboveGreen + row_aroundGreen + row_belowGreen) / 3.0);
+            averageGreen = round((row_aboveGreen + row_aroundGreen + row_belowGreen) / 9.0);
         }
     }
     return averageGreen;
@@ -167,7 +167,7 @@ int blur_Redcalculations(int height, int width, RGBTRIPLE image[height][width])
             int row_aboveRed = (copy[i-1][j-1].rgbtRed + copy[i-1][j].rgbtRed + copy[i-1][j+1].rgbtRed);
             int row_aroundRed = (copy[i-1][j-1].rgbtRed + copy[i][j].rgbtRed + copy[i][j+1].rgbtRed);
             int row_belowRed = (copy[i-1][j-1].rgbtRed + copy[i+1][j].rgbtRed + copy[i+1][j+1].rgbtRed);
-            averageRed = round((row_aboveRed + row_aroundRed + row_belowRed) / 3.0);
+            averageRed = round((row_aboveRed + row_aroundRed + row_belowRed) / 9.0);
         }
     }
     return averageRed;
