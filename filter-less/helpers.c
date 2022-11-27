@@ -130,7 +130,7 @@ int blur_Bluecalculations(int height, int width, RGBTRIPLE copy[height][width], 
     {
         for (int j = startX; j < endX; j++)
         {
-             = (copy[i-1][j-1].rgbtBlue + copy[i-1][j].rgbtBlue + copy[i-1][j+1].rgbtBlue);
+            rgbtBlue += copy[i][j].rgbtBlue;
 
             averageBlue = round((row_aboveBlue + row_aroundBlue + row_belowBlue) / 9.0);
         }
