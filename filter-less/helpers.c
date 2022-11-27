@@ -101,10 +101,18 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     return;
 }
 
-int blur_Bluecalculations(int height, int width, RGBTRIPLE copy[height][width], )
+int blur_Bluecalculations(int height, int width, RGBTRIPLE copy[height][width], int x, int y)
 {
+    int startY = y;
+    int endY = y;
+    int startX = x;
+    int endX = x;
     int averageBlue;
-    if
+    if (y!=0)
+    {
+        startY = y-1;
+    }
+    if ()
     for(int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
