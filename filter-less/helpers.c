@@ -99,5 +99,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 
 int blur_calculations(int height, int width, RGBTRIPLE image[height][width])
 {
-    
+    int row_above = 
+    int row_around
+    int row_below
 }
