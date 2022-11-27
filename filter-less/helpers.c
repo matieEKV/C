@@ -125,13 +125,12 @@ int blur_Bluecalculations(int height, int width, RGBTRIPLE copy[height][width], 
         endX = x+1;
     }
 
-    for(int i = y; i < height; i++)
+    for(int i = startY; i < endY; i++)
     {
-        for (int j = 0; j < width; j++)
+        for (int j = startX; j < endX; j++)
         {
-            int row_aboveBlue = (copy[i-1][j-1].rgbtBlue + copy[i-1][j].rgbtBlue + copy[i-1][j+1].rgbtBlue);
-            int row_aroundBlue = (copy[i-1][j-1].rgbtBlue + copy[i][j].rgbtBlue + copy[i][j+1].rgbtBlue);
-            int row_belowBlue = (copy[i-1][j-1].rgbtBlue + copy[i+1][j].rgbtBlue + copy[i+1][j+1].rgbtBlue);
+            int  = (copy[i-1][j-1].rgbtBlue + copy[i-1][j].rgbtBlue + copy[i-1][j+1].rgbtBlue);
+
             averageBlue = round((row_aboveBlue + row_aroundBlue + row_belowBlue) / 9.0);
         }
     }
