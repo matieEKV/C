@@ -2,8 +2,7 @@
 #include <stdio.h>
 #include <math.h>
 
-struct averageRGB
-int blur_Bluecalculations(int height, int width, RGBTRIPLE image[height][width]);
+struct RGBTRIPLE(int height, int width, RGBTRIPLE image[height][width], int x, int y);
 
 
 // Convert image to grayscale
@@ -101,7 +100,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     return;
 }
 
-int blur_Bluecalculations(int height, int width, RGBTRIPLE copy[height][width], int x, int y)
+struct RGBTRIPLE(int height, int width, RGBTRIPLE copy[height][width], int x, int y)
 {
     int rgbtBlue;
     int rgbtGreen;
@@ -146,45 +145,10 @@ int blur_Bluecalculations(int height, int width, RGBTRIPLE copy[height][width], 
     averageBlue = round(rgbtBlue / counter);
     averageGreen = round(rgbtGreen / counter);
     averageRed = round(rgbtRed / counter);
-    
-    typedef struct
-    {
-        int averageBlue;
-        int averageGreen;
-        int averageRed;
-    }
-    averageRGB;
-    return averageBlue;
-}
 
-int blur_Greencalculations(int height, int width, RGBTRIPLE copy[height][width])
-{
-    int averageGreen;
-    for(int i = 0; i < height; i++)
-    {
-        for (int j = 0; j < width; j++)
-        {
-            int row_aboveGreen = (copy[i-1][j-1].rgbtGreen + copy[i-1][j].rgbtGreen + copy[i-1][j+1].rgbtGreen);
-            int row_aroundGreen = (copy[i-1][j-1].rgbtGreen + copy[i][j].rgbtGreen + copy[i][j+1].rgbtGreen);
-            int row_belowGreen = (copy[i-1][j-1].rgbtGreen + copy[i+1][j].rgbtGreen + copy[i+1][j+1].rgbtGreen);
-            averageGreen = round((row_aboveGreen + row_aroundGreen + row_belowGreen) / 9.0);
-        }
-    }
-    return averageGreen;
-}
-
-int blur_Redcalculations(int height, int width, RGBTRIPLE copy[height][width])
-{
-    int averageRed;
-    for(int i = 0; i < height; i++)
-    {
-        for (int j = 0; j < width; j++)
-        {
-            int row_aboveRed = (copy[i-1][j-1].rgbtRed + copy[i-1][j].rgbtRed + copy[i-1][j+1].rgbtRed);
-            int row_aroundRed = (copy[i-1][j-1].rgbtRed + copy[i][j].rgbtRed + copy[i][j+1].rgbtRed);
-            int row_belowRed = (copy[i-1][j-1].rgbtRed + copy[i+1][j].rgbtRed + copy[i+1][j+1].rgbtRed);
-            averageRed = round((row_aboveRed + row_aroundRed + row_belowRed) / 9.0);
-        }
-    }
-    return averageRed;
+    struct RGBTRIPLE newValues;
+    newValues.rgbtBlue = averageBlue;
+    newValues.rgbtGreen = averageGreen;
+    newValues.rgbtRed = averageRed;
+    return newValues;
 }
