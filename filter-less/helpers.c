@@ -92,7 +92,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         {
             for (int j = 0; j < width; j++)
             {
-                image[i][j] = blurredPixel(height, width, copy, j, i);
+                image[i][j] = blurredPixel(height, width, copy, i, j);
             }
         }
     return;
@@ -111,26 +111,26 @@ RGBTRIPLE blurredPixel(int height, int width, RGBTRIPLE copy[height][width], int
     int averageBlue;
     int averageGreen;
     int averageRed;
-    if (y!=0)
-    {
-        startY = y-1;
-    }
-    if (y < height-1)
-    {
-        endY = y+1;
-    }
     if (x!=0)
     {
         startX = x-1;
     }
-    if (x < width-1)
+    if (x < height-1)
     {
         endX = x+1;
     }
-
-    for (int i = startY; i < endY; i++)
+    if (y!=0)
     {
-        for (int j = startX; j < endX; j++)
+        startY = y-1;
+    }
+    if (y < width-1)
+    {
+        endY = y+1;
+    }
+
+    for (int i = startX; i < endX; i++)
+    {
+        for (int j = startY; j < endY; j++)
         {
             rgbtBlue += copy[i][j].rgbtBlue;
             rgbtGreen += copy[i][j].rgbtGreen;
