@@ -159,10 +159,10 @@ RGBTRIPLE blurredPixel(int height, int width, RGBTRIPLE copy[height][width], int
     //     };
     for (int i = 0; i < height; i++)
     {
-        // for (int j = y; j < width; j++)
-        // {
+        for (int j = 0; j < width; j++)
+        {
             int nx = x + offXvalues[i];
-            int ny = y + offYvalues[i];
+            int ny = y + offYvalues[j];
 
         //     if (nx < 0 || nx > height || ny < 0 || ny > width)
         // {
@@ -177,7 +177,7 @@ RGBTRIPLE blurredPixel(int height, int width, RGBTRIPLE copy[height][width], int
             //printf("\nPixel: R %f, G %f, B %f", rgbtRed, rgbtGreen, rgbtBlue);
                 counter++;
             }
-        // }
+        }
     }
     averageBlue = round(rgbtBlue / counter);
     averageGreen = round(rgbtGreen / counter);
