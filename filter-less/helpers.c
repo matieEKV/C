@@ -193,7 +193,7 @@ RGBTRIPLE blurredPixel(int height, int width, RGBTRIPLE copy[height][width], int
 
 int isValidCell(int nx, int ny, int height, int width)
 {
-    if ((nx > 0 && nx < height) || (ny > 0 && ny < width))
+    if ((nx >= 0 && nx < height) && (ny >= 0 && ny < width))
     {
         return 1;
     }
