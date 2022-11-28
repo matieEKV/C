@@ -152,8 +152,8 @@ RGBTRIPLE blurredPixel(int height, int width, RGBTRIPLE copy[height][width], int
         {
                 if (isValidCell(i, j, height, width) > 0) {
                     rgbtBlue += copy[i][j].rgbtBlue;
-                    rgbtGreen += copy[j][j].rgbtGreen;
-                    rgbtRed += copy[j][j].rgbtRed;
+                    rgbtGreen += copy[i][j].rgbtGreen;
+                    rgbtRed += copy[i][j].rgbtRed;
 
                 //printf("\nPixel: R %f, G %f, B %f", rgbtRed, rgbtGreen, rgbtBlue);
                     counter++;
