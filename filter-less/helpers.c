@@ -121,34 +121,34 @@ RGBTRIPLE blurredPixel(int height, int width, RGBTRIPLE copy[height][width], int
     float rgbtBlue = 0.0;
     float rgbtGreen = 0;
     float rgbtRed = 0;
-    // int startX = x;
-    // int endX = x;
-    // int startY = y;
-    // int endY = y;
+    int startX = x;
+    int endX = x;
+    int startY = y;
+    int endY = y;
     int counter = 0.0;
     int averageBlue = 0.0;
     int averageGreen;
     int averageRed;
-    // if (x > 0)
-    // {
-    //     startX = x-1;
-    // }
-    // if (x < width-1)
-    // {
-    //     endX = x+1;
-    // }
-    // if (y > 0)
-    // {
-    //     startY = y-1;
-    // }
-    // if (y < height-1)
-    // {
-    //     endY = y+1;
-    // }
-
-    for (int i = (y-1); i <= (y+1); i++) //startY; i <= endY; i++)
+    if (x > 0)
     {
-        for (int j = (x-1); j <= (x+1); j++) //startX; j <= endX; j++)
+        startX = x-1;
+    }
+    if (x < width-1)
+    {
+        endX = x+1;
+    }
+    if (y > 0)
+    {
+        startY = y-1;
+    }
+    if (y < height-1)
+    {
+        endY = y+1;
+    }
+
+    for (int i = startY; i <= endY; i++) //(y-1); i <= (y+1); i++) //
+    {
+        for (int j = startX; j <= endX; j++) //(x-1); j <= (x+1); j++) //
         {
                 if (isValidCell(i, j, height, width) > 0) {
                     rgbtBlue += copy[i][j].rgbtBlue;
