@@ -128,9 +128,9 @@ RGBTRIPLE blurredPixel(int height, int width, RGBTRIPLE copy[height][width], int
     //     endY = y+1;
     // }
 
-    for (int i = x-1; i < x+1; i++)
+    for (int i = x-1; i < height; i++)
     {
-        for (int j = y-1; j < y+1; j++)
+        for (int j = y-1; j < width; j++)
         {
             rgbtBlue += copy[i][j].rgbtBlue;
             rgbtGreen += copy[i][j].rgbtGreen;
