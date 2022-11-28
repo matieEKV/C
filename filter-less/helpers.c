@@ -3,6 +3,7 @@
 #include <math.h>
 
 RGBTRIPLE blurredPixel(int height, int width, RGBTRIPLE image[height][width], int x, int y);
+int isValidCell(int x, int y, int rows, int columns);
 
 
 // Convert image to grayscale
@@ -151,17 +152,20 @@ RGBTRIPLE blurredPixel(int height, int width, RGBTRIPLE copy[height][width], int
             int nX = x + offXvalues[k][1];
             int nY = y + offYvalues[k][0];
 
-            if (nY < 0 || nY > height || nX < 0 || nX > width)
-        {
-            continue;
-        }
-            rgbtBlue += copy[nY][nX].rgbtBlue;
-            rgbtGreen += copy[nY][nX].rgbtGreen;
-            rgbtRed += copy[nY][nX].rgbtRed;
+        //     if (nY < 0 || nY > height || nX < 0 || nX > width)
+        // {
+        //     continue;
+        // }
+            if (isValidCell(x, y, rows, columns))
+            {
+                rgbtBlue += copy[nY][nX].rgbtBlue;
+                rgbtGreen += copy[nY][nX].rgbtGreen;
+                rgbtRed += copy[nY][nX].rgbtRed;
 
             //printf("\nPixel: R %f, G %f, B %f", rgbtRed, rgbtGreen, rgbtBlue);
-            counter++;
+                counter++;
         // }
+            }
     }
     averageBlue = round(rgbtBlue / counter);
     averageGreen = round(rgbtGreen / counter);
@@ -173,4 +177,13 @@ RGBTRIPLE blurredPixel(int height, int width, RGBTRIPLE copy[height][width], int
     newValues.rgbtGreen = averageGreen;
     newValues.rgbtRed = averageRed;
     return newValues;
+}
+
+int isValidCell(int x, int y, int rows, int columns)
+{
+    if ((x >= 0 && x < rows) && (y >= 0 && y < columns))
+    {
+        return 1;
+    }
+    return 0;
 }
