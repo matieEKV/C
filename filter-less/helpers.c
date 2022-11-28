@@ -140,9 +140,9 @@ RGBTRIPLE blurredPixel(int height, int width, RGBTRIPLE copy[height][width], int
             counter++;
         }
     }
-    averageBlue = rgbtBlue / 12;
-    averageGreen = rgbtGreen / 5;
-    averageRed = rgbtRed / 8;
+    averageBlue = rgbtBlue / counter;
+    averageGreen = rgbtGreen / counter;
+    averageRed = rgbtRed / counter;
     // printf("; Average: R %d, G %d, B %d, counter %d", averageRed, averageGreen, averageBlue, counter);
 
     RGBTRIPLE newValues;
