@@ -108,9 +108,9 @@ RGBTRIPLE blurredPixel(int height, int width, RGBTRIPLE copy[height][width], int
     int startY = y;
     int endY = y;
     int counter = 0;
-    double averageBlue;
-    double averageGreen;
-    double averageRed;
+    int averageBlue;
+    int averageGreen;
+    int averageRed;
     // if (x!=0)
     // {
     //     startX = x-1;
