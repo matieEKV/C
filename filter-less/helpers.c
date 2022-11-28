@@ -144,9 +144,9 @@ RGBTRIPLE blurredPixel(int height, int width, RGBTRIPLE copy[height][width], int
     int offXvalues[] = {-1, -1, -1, 0, 0, 0, 1, 1, 1};
     int offYvalues[] = {-1, 0, 1, -1, 0, 1, -1, 0, 1};
 
-    for (int i = y; i < height; i++)
+    for (int i = y; i < height-1; i++)
     {
-        for (int j = x; j < width; j++)
+        for (int j = x; j < width-1; j++)
         {
             int nX = x + offXvalues[j];
             int nY = y + offYvalues[i];
