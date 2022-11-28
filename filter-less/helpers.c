@@ -82,7 +82,7 @@ void blur(int height, int width, RGBTRIPLE imageOriginal[height][width])
     height = 3;
     width = 3;
     // image = [[(10, 20, 30), (40, 50, 60), (70, 80, 90)],[(110, 130, 140), (120, 140, 150), (130, 150, 160)],[(200, 210, 220), (220, 230, 240), (240, 250, 255)]];
-    RGBTRIPLE image[3][3] = {
+    RGBTRIPLE imageA[3][3] = {
         { {10, 20, 30}, {40, 50, 60}, {70, 80, 90} } ,
         { {110, 130, 140}, {120, 140, 150}, {130, 150, 160} } ,
         { {200, 210, 220}, {220, 230, 240}, {240, 250, 255} }
@@ -97,7 +97,7 @@ void blur(int height, int width, RGBTRIPLE imageOriginal[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-            copy[i][j] = image[i][j];
+            copy[i][j] = imageA[i][j];
         }
     }
 
@@ -105,7 +105,7 @@ void blur(int height, int width, RGBTRIPLE imageOriginal[height][width])
         {
             for (int j = 0; j < width; j++)
             {
-                image[i][j] = blurredPixel(height, width, copy, i, j);
+                imageA[i][j] = blurredPixel(height, width, copy, i, j);
             }
         }
     return;
