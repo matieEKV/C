@@ -150,7 +150,7 @@ RGBTRIPLE blurredPixel(int height, int width, RGBTRIPLE copy[height][width], int
     {
         for (int j = (x-1); j <= (x+1); j++) //startX; j <= endX; j++)
         {
-                if (isValidCell(i, j, height, width)) {
+                if (isValidCell(i, j, height, width) > 0) {
                     rgbtBlue += copy[i][j].rgbtBlue;
                     rgbtGreen += copy[j][j].rgbtGreen;
                     rgbtRed += copy[j][j].rgbtRed;
