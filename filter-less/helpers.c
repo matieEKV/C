@@ -103,10 +103,10 @@ RGBTRIPLE blurredPixel(int height, int width, RGBTRIPLE copy[height][width], int
     int rgbtBlue = 0;
     int rgbtGreen = 0;
     int rgbtRed = 0;
-    int startY = y;
-    int endY = y;
     int startX = x;
     int endX = x;
+    int startY = y;
+    int endY = y;
     int counter = 0;
     int averageBlue;
     int averageGreen;
