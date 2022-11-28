@@ -80,6 +80,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
+    println("Image: %dx%d", height, width);
 //     height = 3;
 //     width = 3;
 //     // image = [[(10, 20, 30), (40, 50, 60), (70, 80, 90)],[(110, 130, 140), (120, 140, 150), (130, 150, 160)],[(200, 210, 220), (220, 230, 240), (240, 250, 255)]];
@@ -114,6 +115,8 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 
 RGBTRIPLE blurredPixel(int height, int width, RGBTRIPLE copy[height][width], int x, int y)
 {
+    println("\nBlurring pixel %d.%d", y, x);
+
     float rgbtBlue = 0.0;
     float rgbtGreen = 0;
     float rgbtRed = 0;
