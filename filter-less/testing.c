@@ -1,6 +1,13 @@
 #include <stdio.h>
 #include <math.h>
 
+typedef struct
+{
+    BYTE  rgbtBlue;
+    BYTE  rgbtGreen;
+    BYTE  rgbtRed;
+}
+RGBTRIPLE;
 
 int main(void)
 {
@@ -8,7 +15,7 @@ int main(void)
     printf
 
 // Blur image
-RGBTRIPLE blur(int height, int width, RGBTRIPLE imageOriginal[height][width])
+RGBTRIPLE blur(int height, int width, RGBTRIPLE image[height][width])
 {
     height = 3;
     width = 3;
