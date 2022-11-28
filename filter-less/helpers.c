@@ -77,16 +77,16 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 }
 
 // Blur image
-void blur(int height, int width, RGBTRIPLE imageOriginal[height][width])
+void blur(int height, int width, RGBTRIPLE image[height][width])
 {
-    height = 3;
-    width = 3;
-    // image = [[(10, 20, 30), (40, 50, 60), (70, 80, 90)],[(110, 130, 140), (120, 140, 150), (130, 150, 160)],[(200, 210, 220), (220, 230, 240), (240, 250, 255)]];
-    RGBTRIPLE imageA[3][3] = {
-        { {10, 20, 30}, {40, 50, 60}, {70, 80, 90} } ,
-        { {110, 130, 140}, {120, 140, 150}, {130, 150, 160} } ,
-        { {200, 210, 220}, {220, 230, 240}, {240, 250, 255} }
-    };
+//     height = 3;
+//     width = 3;
+//     // image = [[(10, 20, 30), (40, 50, 60), (70, 80, 90)],[(110, 130, 140), (120, 140, 150), (130, 150, 160)],[(200, 210, 220), (220, 230, 240), (240, 250, 255)]];
+//     RGBTRIPLE imageA[3][3] = {
+//         { {10, 20, 30}, {40, 50, 60}, {70, 80, 90} } ,
+//         { {110, 130, 140}, {120, 140, 150}, {130, 150, 160} } ,
+//         { {200, 210, 220}, {220, 230, 240}, {240, 250, 255} }
+//     };
 
     // RGBTRIPLE imageRowA[3] = { {10, 20, 30}, {40, 50, 60}, {70, 80, 90} };
     // RGBTRIPLE imageRowB[3] = { {110, 130, 140}, {120, 140, 150}, {130, 150, 160} };
@@ -97,7 +97,7 @@ void blur(int height, int width, RGBTRIPLE imageOriginal[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-            copy[i][j] = imageA[i][j];
+            copy[i][j] = image[i][j];
         }
     }
 
@@ -105,7 +105,7 @@ void blur(int height, int width, RGBTRIPLE imageOriginal[height][width])
         {
             for (int j = 0; j < width; j++)
             {
-                imageA[i][j] = blurredPixel(height, width, copy, i, j);
+                image[i][j] = blurredPixel(height, width, copy, i, j);
             }
         }
     return;
@@ -156,7 +156,7 @@ RGBTRIPLE blurredPixel(int height, int width, RGBTRIPLE copy[height][width], int
     averageBlue = round(rgbtBlue / counter);
     averageGreen = round(rgbtGreen / counter);
     averageRed = round(rgbtRed / counter);
-    printf("\nAverage: R %d, G %d, B %d\n", averageRed, averageGreen, averageBlue);
+    // printf("\nAverage: R %d, G %d, B %d\n", averageRed, averageGreen, averageBlue);
 
     RGBTRIPLE newValues;
     newValues.rgbtBlue = averageBlue;
