@@ -2,30 +2,13 @@
 #include <math.h>
 
 
-
-
-void reflect(int height, int width, RGBTRIPLE image[height][width])
+int main(void)
 {
-    for(int i = 0; i < height; i++)
-    {
-        for (int j = 0; j < width/2; j++)
-        {
-            RGBTRIPLE temp = image[i][j];
-            image[i][j] = image[i][width-1-j];
-            image[i][width-1-j] = temp;
 
-            // 0       n-1
-            // 1       n-1-1
-            // 2       n-2-1
-            // 3       n-3-1
-            // x       n-1-x
-        }
-    }
-    return;
-}
+    printf
 
 // Blur image
-void blur(int height, int width, RGBTRIPLE imageOriginal[height][width])
+RGBTRIPLE blur(int height, int width, RGBTRIPLE imageOriginal[height][width])
 {
     height = 3;
     width = 3;
@@ -56,7 +39,7 @@ void blur(int height, int width, RGBTRIPLE imageOriginal[height][width])
                 image[i][j] = blurredPixel(height, width, copy, i, j);
             }
         }
-    return;
+    return image;
 }
 
 RGBTRIPLE blurredPixel(int height, int width, RGBTRIPLE copy[height][width], int x, int y)
