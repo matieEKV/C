@@ -125,6 +125,8 @@ RGBTRIPLE blurredPixel(int height, int width, RGBTRIPLE copy[height][width], int
     int averageBlue = 0.0;
     int averageGreen;
     int averageRed;
+    int i =0;
+    int j = 0;
     // if (x > 0)
     // {
     //     startX = x-1;
@@ -159,8 +161,8 @@ RGBTRIPLE blurredPixel(int height, int width, RGBTRIPLE copy[height][width], int
     {
         // for (int j = y; j < width; j++)
         // {
-            int nX = i + offXvalues[k][0];
-            int nY = j + offYvalues[k][1];
+            int nX = i + offset[k][0];
+            int nY = j + offset[k][1];
 
         //     if (nY < 0 || nY > height || nX < 0 || nX > width)
         // {
