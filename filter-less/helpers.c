@@ -116,48 +116,48 @@ RGBTRIPLE blurredPixel(int height, int width, RGBTRIPLE copy[height][width], int
     float rgbtBlue = 0.0;
     float rgbtGreen = 0;
     float rgbtRed = 0;
-    // int startX = x;
-    // int endX = x;
-    // int startY = y;
-    // int endY = y;
+    int startX = x;
+    int endX = x;
+    int startY = y;
+    int endY = y;
     int counter = 0.0;
     int averageBlue = 0.0;
     int averageGreen;
     int averageRed;
-    // if (x!=0)
-    // {
-    //     startX = x-1;
-    // }
-    // if (x < height-1)
-    // {
-    //     endX = x+1;
-    // }
-    // if (y!=0)
-    // {
-    //     startY = y-1;
-    // }
-    // if (y < width-1)
-    // {
-    //     endY = y+1;
-    // }
-
-    int offXvalues[] = {-1, 1, -1, 0, 0, 0, 1, 1, 1};
-    int offYvalues[] = {-1, 0, 1, -1, 0, 1, -1, 0, 1};
-
-    for (int i = x; i < height; i++)
+    if (x!=0)
     {
-        for (int j = y; j < width; j++)
-        {
-            int nX = x + offXvalues[i];
-            int nY = y + offYvalues[j];
+        startX = x-1;
+    }
+    if (x < height)
+    {
+        endX = x+1;
+    }
+    if (y!=0)
+    {
+        startY = y;
+    }
+    if (y < width)
+    {
+        endY = y+1;
+    }
 
-            if (nX < 0 || nX > height || nY < 0 || nY > width)
+    // int offXvalues[] = {-1, 1, -1, 0, 0, 0, 1, 1, 1};
+    // int offYvalues[] = {-1, 0, 1, -1, 0, 1, -1, 0, 1};
+
+    for (int i = startX; i < endX; i++)
+    {
+        for (int j = startY; j < endY; j++)
         {
-            continue;
-        }
-            rgbtBlue += copy[nX][nY].rgbtBlue;
-            rgbtGreen += copy[nX][nY].rgbtGreen;
-            rgbtRed += copy[nX][nY].rgbtRed;
+            // int nX = x + offXvalues[i];
+            // int nY = y + offYvalues[j];
+
+        //     if (nX < 0 || nX > height || nY < 0 || nY > width)
+        // {
+        //     continue;
+        // }
+            rgbtBlue += copy[i][j].rgbtBlue;
+            rgbtGreen += copy[i][j].rgbtGreen;
+            rgbtRed += copy[i][j].rgbtRed;
 
             //printf("\nPixel: R %f, G %f, B %f", rgbtRed, rgbtGreen, rgbtBlue);
             counter++;
