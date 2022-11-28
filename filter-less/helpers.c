@@ -151,7 +151,7 @@ RGBTRIPLE blurredPixel(int height, int width, RGBTRIPLE copy[height][width], int
             int nx = x + offSetX[i];
             int ny = y + offSetY[j];
 
-            if (nx < 0 || nx > height || ny > 0 || ny > width)
+            if (nx < 0 || nx > height || ny < 0 || ny > width)
         {
             continue;
         }
