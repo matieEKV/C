@@ -115,18 +115,18 @@ RGBTRIPLE blurredPixel(int height, int width, RGBTRIPLE copy[height][width], int
     {
         startX = x-1;
     }
-    if (x < height-1)
-    {
-        endX = x+1;
-    }
+    // if (x < height-1)
+    // {
+    //     endX = x+1;
+    // }
     if (y!=0)
     {
         startY = y-1;
     }
-    if (y < width-1)
-    {
-        endY = y+1;
-    }
+    // if (y < width-1)
+    // {
+    //     endY = y+1;
+    // }
 
     for (int i = startX; i < height; i++)
     {
