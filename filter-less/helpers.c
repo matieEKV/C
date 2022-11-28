@@ -108,7 +108,7 @@ RGBTRIPLE blurredPixel(int height, int width, RGBTRIPLE copy[height][width], int
     int startY = y;
     int endY = y;
     float counter = 0.0;
-    int averageBlue;
+    float averageBlue = 0.0;
     int averageGreen;
     int averageRed;
     // if (x!=0)
@@ -137,7 +137,7 @@ RGBTRIPLE blurredPixel(int height, int width, RGBTRIPLE copy[height][width], int
             rgbtRed += copy[i][j].rgbtRed;
 
             // printf("\nPixel: R %d, G %d, B %d", rgbtRed, rgbtGreen, rgbtBlue);
-            counter++;
+            counter += 1.0;
         }
     }
     averageBlue = round(rgbtBlue / counter);
