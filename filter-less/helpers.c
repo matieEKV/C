@@ -146,18 +146,18 @@ RGBTRIPLE blurredPixel(int height, int width, RGBTRIPLE copy[height][width], int
 
     for (int i = x; i < height; i++)
     {
-        // for (int j = y; j < width; j++)
-        // {
+        for (int j = y; j < width; j++)
+        {
             int nx = x + offSetX[i];
-            int ny = y + offSetY[i];
+            int ny = y + offSetY[j];
 
             if (nx < 0 || nx > height || ny > 0 || ny > width)
         {
             continue;
-        // }
-            rgbtBlue += copy[ny][nx].rgbtBlue;
-            rgbtGreen += copy[ny][nx].rgbtGreen;
-            rgbtRed += copy[ny][nx].rgbtRed;
+        }
+            rgbtBlue += copy[nx][ny].rgbtBlue;
+            rgbtGreen += copy[nx][ny].rgbtGreen;
+            rgbtRed += copy[nx][ny].rgbtRed;
 
             // printf("\nPixel: R %f, G %f, B %f", rgbtRed, rgbtGreen, rgbtBlue);
             counter++;
