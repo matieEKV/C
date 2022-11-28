@@ -159,7 +159,7 @@ RGBTRIPLE blurredPixel(int height, int width, RGBTRIPLE copy[height][width], int
             {1, 0},
             {1, 1}
         };
-    for (int k = 0; k < height; i++)
+    for (int k = 0; k < 9; k++)
     {
         // for (int j = y; j < width; j++)
         // {
