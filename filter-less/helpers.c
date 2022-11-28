@@ -164,10 +164,10 @@ RGBTRIPLE blurredPixel(int height, int width, RGBTRIPLE copy[height][width], int
             int nx = x + offXvalues[i];
             int ny = y + offYvalues[i];
 
-            if (nx < 0 || nx > height || ny < 0 || ny > width)
-        {
-            continue;
-        }
+        //     if (nx < 0 || nx > height || ny < 0 || ny > width)
+        // {
+        //     continue;
+        // }
             if (isValidCell(nx, ny, height, width))
             {
                 rgbtBlue += copy[nx][ny].rgbtBlue;
