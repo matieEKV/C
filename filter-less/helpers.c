@@ -155,9 +155,9 @@ RGBTRIPLE blurredPixel(int height, int width, RGBTRIPLE copy[height][width], int
         {
             continue;
         }
-            rgbtBlue += copy[i][j].rgbtBlue;
-            rgbtGreen += copy[i][j].rgbtGreen;
-            rgbtRed += copy[i][j].rgbtRed;
+            rgbtBlue += copy[nx][ny].rgbtBlue;
+            rgbtGreen += copy[nx][ny].rgbtGreen;
+            rgbtRed += copy[nx][ny].rgbtRed;
 
             printf("\nPixel: R %f, G %f, B %f", rgbtRed, rgbtGreen, rgbtBlue);
             counter++;
