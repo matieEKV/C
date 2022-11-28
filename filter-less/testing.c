@@ -39,7 +39,11 @@ RGBTRIPLE blur(int height, int width, RGBTRIPLE imageOriginal[height][width])
                 image[i][j] = blurredPixel(height, width, copy, i, j);
             }
         }
-    return image;
+    RGBTRIPLE newImage;
+    newImage.rgbtBlue = averageBlue;
+    newImage.rgbtGreen = averageGreen;
+    newImage.rgbtRed = averageRed;
+    return newValues;
 }
 
 RGBTRIPLE blurredPixel(int height, int width, RGBTRIPLE copy[height][width], int x, int y)
