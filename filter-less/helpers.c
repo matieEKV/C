@@ -149,14 +149,14 @@ RGBTRIPLE blurredPixel(int height, int width, RGBTRIPLE copy[height][width], int
             rgbtGreen += copy[i][j].rgbtGreen;
             rgbtRed += copy[i][j].rgbtRed;
 
-            // printf("\nPixel: R %d, G %d, B %d", rgbtRed, rgbtGreen, rgbtBlue);
+            printf("\nPixel: R %d, G %d, B %f", rgbtRed, rgbtGreen, rgbtBlue);
             counter += 1.0;
         }
     }
     averageBlue = round(rgbtBlue / counter);
     averageGreen = rgbtGreen / counter;
     averageRed = rgbtRed / counter;
-    // printf("; Average: R %d, G %d, B %d, counter %d", averageRed, averageGreen, averageBlue, counter);
+    printf("Average: R %d, G %d, B %f, averageRed, averageGreen, averageBlue, counter);
 
     RGBTRIPLE newValues;
     newValues.rgbtBlue = averageBlue;
