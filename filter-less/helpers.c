@@ -142,15 +142,25 @@ RGBTRIPLE blurredPixel(int height, int width, RGBTRIPLE copy[height][width], int
     //     endY = y+1;
     // }
 
-    int offXvalues[] = {-1, -1, -1, 0, 0, 0, 1, 1, 1};
-    int offYvalues[] = {-1, 0, 1, -1, 0, 1, -1, 0, 1};
-
-    for (int i = x; i < height; i++)
+    // int offXvalues[] = {-1, -1, -1, 0, 0, 0, 1, 1, 1};
+    // int offYvalues[] = {-1, 0, 1, -1, 0, 1, -1, 0, 1};
+    int offset[9][2] = {
+            {-1, -1},
+            {-1, 0},
+            {-1, 1},
+            {0, -1},
+            {0, 0},
+            {0, 1},
+            {1, -1},
+            {1, 0},
+            {1, 1}
+        };
+    for (int k = 0; i < height; i++)
     {
-        for (int j = y; j < width; j++)
-        {
-            int nX = x + offXvalues[i];
-            int nY = y + offYvalues[j];
+        // for (int j = y; j < width; j++)
+        // {
+            int nX = i + offXvalues[k][0];
+            int nY = j + offYvalues[k][1];
 
         //     if (nY < 0 || nY > height || nX < 0 || nX > width)
         // {
@@ -165,7 +175,7 @@ RGBTRIPLE blurredPixel(int height, int width, RGBTRIPLE copy[height][width], int
             //printf("\nPixel: R %f, G %f, B %f", rgbtRed, rgbtGreen, rgbtBlue);
                 counter++;
             }
-        }
+        // }
     }
     averageBlue = round(rgbtBlue / counter);
     averageGreen = round(rgbtGreen / counter);
