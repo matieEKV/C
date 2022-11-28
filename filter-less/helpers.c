@@ -117,35 +117,35 @@ RGBTRIPLE blurredPixel(int height, int width, RGBTRIPLE copy[height][width], int
     float rgbtBlue = 0.0;
     float rgbtGreen = 0;
     float rgbtRed = 0;
-    // int startX = x;
-    // int endX = x;
-    // int startY = y;
-    // int endY = y;
+    int startX = x;
+    int endX = x;
+    int startY = y;
+    int endY = y;
     int counter = 0.0;
     int averageBlue = 0.0;
     int averageGreen;
     int averageRed;
     // int x = -1;
     // int y = -1;
-    // if (x > 0)
-    // {
-    //     startX = x-1;
-    // }
-    // if (x < height)
-    // {
-    //     endX = x+1;
-    // }
-    // if (y > 0)
-    // {
-    //     startY = y;
-    // }
-    // if (y < width)
-    // {
-    //     endY = y+1;
-    // }
+    if (x > 0)
+    {
+        startX = x-1;
+    }
+    if (x < height)
+    {
+        endX = x+1;
+    }
+    if (y > 0)
+    {
+        startY = y;
+    }
+    if (y < width)
+    {
+        endY = y+1;
+    }
 
-    int offXvalues[] = {-1, -1, -1, 0, 0, 0, 1, 1, 1};
-    int offYvalues[] = {-1, 0, 1, -1, 0, 1, -1, 0, 1};
+    // int offXvalues[] = {-1, -1, -1, 0, 0, 0, 1, 1, 1};
+    // int offYvalues[] = {-1, 0, 1, -1, 0, 1, -1, 0, 1};
     // int offset[9][2] = {
     //         {-1, -1},
     //         {-1, 0},
@@ -157,26 +157,26 @@ RGBTRIPLE blurredPixel(int height, int width, RGBTRIPLE copy[height][width], int
     //         {1, 0},
     //         {1, 1}
     //     };
-    for (int i = 0; i < height; i++)
+    for (int i = startX; i < endX; i++)
     {
-        for (int j = 0; j < width; j++)
+        for (int j = startY; j < endY; j++)
         {
-            int nx = x + offXvalues[i];
-            int ny = y + offYvalues[j];
+            // int nx = x + offXvalues[i];
+            // int ny = y + offYvalues[j];
 
         //     if (nx < 0 || nx > height || ny < 0 || ny > width)
         // {
         //     continue;
         // }
-            if (isValidCell(nx, ny, height, width))
-            {
-                rgbtBlue += copy[nx][ny].rgbtBlue;
-                rgbtGreen += copy[nx][ny].rgbtGreen;
-                rgbtRed += copy[nx][ny].rgbtRed;
+            // if (isValidCell(nx, ny, height, width))
+            // {
+                rgbtBlue += copy[i][j].rgbtBlue;
+                rgbtGreen += copy[j][j].rgbtGreen;
+                rgbtRed += copy[j][j].rgbtRed;
 
             //printf("\nPixel: R %f, G %f, B %f", rgbtRed, rgbtGreen, rgbtBlue);
                 counter++;
-            }
+            // }
         }
     }
     averageBlue = round(rgbtBlue / counter);
@@ -191,11 +191,11 @@ RGBTRIPLE blurredPixel(int height, int width, RGBTRIPLE copy[height][width], int
     return newValues;
 }
 
-int isValidCell(int nx, int ny, int height, int width)
-{
-    if ((nx >= 0 && nx < height) && (ny >= 0 && ny < width))
-    {
-        return 1;
-    }
-    return 0;
-}
+// int isValidCell(int nx, int ny, int height, int width)
+// {
+//     if ((nx >= 0 && nx < height) && (ny >= 0 && ny < width))
+//     {
+//         return 1;
+//     }
+//     return 0;
+// }
