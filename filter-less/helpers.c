@@ -107,7 +107,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         {
             for (int j = 0; j < width; j++)
             {
-                printf("\nGoing to blur %d.%d of %dx%d", j, i, height, width);
+                printf("\nGoing to blur %d.%d of %dx%d", i, j, height, width);
                 image[i][j] = blurredPixel(height, width, copy, j, i);
             }
         }
