@@ -105,7 +105,7 @@ void blur(int height, int width, RGBTRIPLE imageOriginal[height][width])
         {
             for (int j = 0; j < width; j++)
             {
-                image[i][j] = blurredPixel(height, width, copy, i, j);
+                imageOriginal[i][j] = blurredPixel(height, width, copy, i, j);
             }
         }
     return;
