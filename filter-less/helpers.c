@@ -79,7 +79,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
-    image = [[(10, 20, 30), (40, 50, 60), (70, 80, 90)][(110, 130, 140), (120, 140, 150), (130, 150, 160)][(200, 210, 220), (220, 230, 240), (240, 250, 255)]];
+    image = [[(10, 20, 30), (40, 50, 60), (70, 80, 90)],[(110, 130, 140), (120, 140, 150), (130, 150, 160)],[(200, 210, 220), (220, 230, 240), (240, 250, 255)]];
 
     RGBTRIPLE copy[height][width];
     for(int i = 0; i < height; i++)
