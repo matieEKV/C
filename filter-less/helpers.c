@@ -113,9 +113,9 @@ void blur(int height, int width, RGBTRIPLE imageOriginal[height][width])
 
 RGBTRIPLE blurredPixel(int height, int width, RGBTRIPLE copy[height][width], int x, int y)
 {
-    int rgbtBlue = 0.0;
-    int rgbtGreen = 0;
-    int rgbtRed = 0;
+    float rgbtBlue = 0.0;
+    float rgbtGreen = 0;
+    float rgbtRed = 0;
     int startX = x;
     int endX = x;
     int startY = y;
@@ -150,12 +150,12 @@ RGBTRIPLE blurredPixel(int height, int width, RGBTRIPLE copy[height][width], int
             rgbtRed += copy[i][j].rgbtRed;
 
             // printf("\nPixel: R %d, G %d, B %d", rgbtRed, rgbtGreen, rgbtBlue);
-            counter += 1.0;
+            counter++;
         }
     }
-    averageBlue = rgbtBlue / counter;
-    averageGreen = rgbtGreen / counter;
-    averageRed = rgbtRed / counter;
+    averageBlue = round(rgbtBlue / counter);
+    averageGreen = round(rgbtGreen / counter);
+    averageRed = round(rgbtRed / counter);
     printf("\nAverage: R %d, G %d, B %d\n", averageRed, averageGreen, averageBlue);
 
     RGBTRIPLE newValues;
