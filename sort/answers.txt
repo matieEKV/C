@@ -1,0 +1,60 @@
+sort1 uses: bubble sort
+
+How do you know?: The determining factor was running time for the sorted list - it was significantly faster compared to other lists.
+Since bubble sort has omega(n), it should go quick through the already sorted list, at least much faster than through random, which it did.
+
+	SORT 1     seconds
+
+Random 5000	    0.079
+Random 10000	0.3
+Random 50000	8.97
+
+Reversed 5000	0.084
+Reversed 10000	0.3125
+Reversed 50000	7.793
+
+Sorted 5000	    0.035
+Sorted 10000	0.08
+Sorted 50000	3.019
+
+
+
+sort2 uses: merge sort
+
+How do you know?: This sorter was by far the fastest of all. Also, running time going though sorted list did not differ much
+from other lists, once again showing that omega is the same as the big O.
+
+	SORT 2     seconds
+
+Random 5000	    0.032
+Random 10000	0.082
+Random 50000	2.749
+
+Reversed 5000	0.052
+Reversed 10000	0.098
+Reversed 50000	1.654
+
+Sorted 5000	    0.045
+Sorted 10000	0.094
+Sorted 50000	2.317
+
+
+sort3 uses: selection sort
+
+How do you know?: Although this sorter was faster than the first one, its running time for the sorted list was comparable
+to other lists, meaning that its omega is the same as the big O.
+
+	SORT 3     seconds
+
+Random 5000	    0.073
+Random 10000	0.201
+Random 50000	3.874
+
+Reversed 5000	0.053
+Reversed 10000	0.304
+Reversed 50000	5.192
+
+Sorted 5000	    0.071
+Sorted 10000	0.212
+Sorted 50000	4.304
+
